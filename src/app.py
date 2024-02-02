@@ -1,0 +1,88 @@
+import aws_cdk as cdk
+import aws_cdk.aws_apigatewayv2 as apigw
+import aws_cdk.aws_apigatewayv2_integrations as integrations
+import aws_cdk.aws_lambda as _lambda
+from constructs import Construct
+
+
+# import aws_cdk.aws_ec2 as ec2
+
+import os
+from pydantic_settings import BaseSettings
+
+
+class Settings(BaseSettings):
+    VPC_ID: str = ""
+    STAGE: str
+    OWNER: str
+    OPENAI_API_KEY: str
+    OPENAI_MODEL: str
+
+
+settings = Settings(
+    # ignore NOTE: https://github.com/blakeNaccarato/pydantic/blob/c5a29ef77374d4fda85e8f5eb2016951d23dac33/docs/visual_studio_code.md?plain=1#L260-L272
+    _env_file=os.environ.get("ENV_FILE", ".env"),  # type: ignore
+)
+
+
+class Stack(cdk.Stack):
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+
+        # if settings.vpc_id:
+        #     vpc = ec2.Vpc.from_lookup(self, f"{id}-vpc", vpc_id=settings.VPC_ID)
+        # else:
+        #     vpc = ec2.Vpc(self, "vpc")
+
+        # Create a Lambda function
+        handler = _lambda.Function(
+            self,
+            "lambda",
+            runtime=_lambda.Runtime.PYTHON_3_11,
+            code=_lambda.Code.from_docker_build(
+                path="src/lambda",
+                platform="linux/amd64",
+            ),
+            handler="main.handler",
+            # TOOD: use secretsmanager
+            environment={
+                "OPENAI_API_KEY": settings.OPENAI_API_KEY,
+                "OPENAI_MODEL": settings.OPENAI_MODEL,
+            },
+        )
+
+        # Create an API Gateway
+        api = apigw.HttpApi(
+            self,
+            "api-gateway",
+            default_integration=integrations.HttpLambdaIntegration(
+                "lambda-integration", handler
+            ),
+        )
+
+        # Output the API Gateway URL
+        cdk.CfnOutput(self, "api_endpoint", value=api.url)
+
+
+CDK_DEFAULT_REGION = os.environ.get("CDK_DEFAULT_REGION")
+CDK_DEFAULT_ACCOUNT = os.environ.get("CDK_DEFAULT_ACCOUNT")
+
+
+app = cdk.App()
+
+env = cdk.Environment(region=CDK_DEFAULT_REGION, account=CDK_DEFAULT_ACCOUNT)
+
+
+stack_name = f"wb-agrifoods-data-lab-{settings.STAGE}".lower()
+
+stack = Stack(app, stack_name, env=env)
+
+for key, value in {
+    "Project": "agrifoods-data-lab",
+    "Owner": settings.OWNER,
+    "Client": "world-bank",
+    "Stage": settings.STAGE,
+}.items():
+    cdk.Tags.of(app).add(key, value, apply_to_launched_instances=True)
+
+app.synth()

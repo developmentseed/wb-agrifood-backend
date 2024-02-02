@@ -1,25 +1,32 @@
 import os
-from dotenv import load_dotenv
+
+# from dotenv import load_dotenv
 
 from fastapi import FastAPI
 from openai import OpenAI
+from mangum import Mangum
 
 from models import Prompt, Answer
 
 # LOAD ENV VARS
-load_dotenv()
-OPEN_AI_APIKEY = os.getenv("OPEN_AI_APIKEY")
-OPEN_AI_MODEL = os.getenv("OPEN_AI_MODEL")
+# load_dotenv()
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+OPENAI_MODEL = os.environ["OPENAI_MODEL"]
 
 # START SERVICES
-client = OpenAI(api_key=OPEN_AI_APIKEY)
+client = OpenAI(api_key=OPENAI_API_KEY)
 app = FastAPI()
+
+
+@app.get("/ping")
+def ping():
+    return {"ping": "pong"}
 
 
 @app.post("/openai/")
 def openai_request(prompt: Prompt):
     response = client.chat.completions.create(
-        model=OPEN_AI_MODEL,
+        model=OPENAI_MODEL,
         messages=[
             {
                 "role": "user",
@@ -28,3 +35,6 @@ def openai_request(prompt: Prompt):
         ],
     )
     return Answer(text=response.choices[0].message.content)
+
+
+handler = Mangum(app, lifespan="off")
