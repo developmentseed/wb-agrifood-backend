@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
     OPENAI_MODEL: str
     OPENAI_EMBEDDING_MODEL: str
+    FORCE_RECREATE: bool = False
 
 
 settings = Settings(
@@ -140,15 +141,19 @@ tools = [
     {'type': 'code_interpreter'},
 ]
 
+assistant = [
+    assistant
+    for assistant in client.beta.assistants.list()
+    if assistant.name == settings.OPENAI_ASSISTANT_NAME
+]
 
-if not any(
-    [
-        assistant.name == settings.OPENAI_ASSISTANT_NAME
-        for assistant in client.beta.assistants.list()
-    ],
-):
-    logger.info('Creating assistant')
-    # Create an assistant
+if assistant and settings.FORCE_RECREATE:
+    print('Deleting assistant')
+    client.beta.assistants.delete(assistant[0].id)
+    assistant = []
+
+if not assistant:
+    print('Creating assistant')
 
     client.beta.assistants.create(
         name=settings.OPENAI_ASSISTANT_NAME,
