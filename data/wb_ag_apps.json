@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Food Systems Dashboard",
+        "description": "A collaborative project by Johns Hopkins University, the Global Alliance for Improved Nutrition, the Food and Agriculture Organization of the United Nations, and other partners, offering a comprehensive tool to understand food systems, identify levers of change, and make informed decisions. It features over 170 food systems indicators from more than 35 data sources, covering global, regional, and national levels for over 230 countries and territories.",
+        "url": "https://foodsystemsdashboard.org"
+    },
+    {
+        "name": "Global Food and Nutrition Security Dashboard",
+        "description": "Developed by the World Bank, G7, and partners, this tool provides high-quality, timely data at both country and global levels on the food crisis. It presents up-to-date data on food crisis severity, tracks global food security financing, and offers research and analysis for improved policy and financial responses to the crisis.",
+        "url": "https://www.gafs.info"
+    },
+    {
+        "name": "DataBank",
+        "description": "An analysis and visualization tool by the World Bank that includes a variety of topics, allowing users to create custom queries, generate tables, charts, and maps, and share their findings. The tool contains collections of time series data on various topics.",
+        "url": "http://databank.worldbank.org/data/home.aspx"
+    },
+    {
+        "name": "Microdata Library",
+        "description": "A collection of datasets from the World Bank and other international, regional, and national organizations. It includes datasets such as Monthly Food Price Inflation Estimates and Monthly Food Price Estimates by Product and Market.",
+        "url": "https://microdata.worldbank.org/index.php/home"
+    },
+    {
+        "name": "50x2030 Initiative to Close the Agricultural Data Gap",
+        "description": "A 10-year, US$500 million program aimed at increasing the capacity of 50 low- and lower-middle-income countries to produce, analyze, interpret, and apply data in the agricultural sector for rural development and food security. It builds upon the experiences of the FAO’s Agricultural Integrated Survey (AGRISurvey) Programme and the World Bank’s Living Standards Measurement Study-Integrated Surveys on Agriculture (LSMS-ISA) to help countries build robust national agricultural and rural statistical systems.",
+        "url": "https://www.50x2030.org"
+    },
+    {
+        "name": "Forum for Agricultural Risk Management in Development (FARMD)",
+        "description": "A knowledge platform providing information and best practices on agricultural risk management, helping stakeholders manage risks associated with agriculture.",
+        "url": "https://www.agriskmanagementforum.org/"
+    }
+]

@@ -8,10 +8,12 @@ from mangum import Mangum
 from models import Answer
 from models import Prompt
 from openai import OpenAI
+
 # from dotenv import load_dotenv
 
 # LOAD ENV VARS
 # load_dotenv()
+OPENAI_ASSISTANT_NAME = os.environ['OPENAI_ASSISTANT_NAME']
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 OPENAI_MODEL = os.environ['OPENAI_MODEL']
 OPENAI_EMBEDDING_MODEL = os.environ['OPENAI_EMBEDDING_MODEL']
@@ -19,7 +21,7 @@ OPENAI_EMBEDDING_MODEL = os.environ['OPENAI_EMBEDDING_MODEL']
 # START SERVICES
 client = OpenAI(api_key=OPENAI_API_KEY)
 app = FastAPI()
-db = lancedb.connect('data/.lancedb')
+db = lancedb.connect('.lancedb')
 
 
 @app.post('/vector_search')
@@ -28,7 +30,8 @@ def vector_search(prompt: Prompt):
 
     query_vector = (
         client.embeddings.create(
-            input=prompt.text, model=OPENAI_EMBEDDING_MODEL,
+            input=prompt.text,
+            model=OPENAI_EMBEDDING_MODEL,
         )
         .data[0]
         .embedding

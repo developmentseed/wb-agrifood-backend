@@ -1,0 +1,992 @@
+[
+    {
+        "name": "Subnational Poverty and Inequality Database (SPID)",
+        "description": "<p>This data entry includes subnational poverty direct estimates from household surveys over time for more than 141 economies at the administrative unit level 1. Administrative unit level 1 refers to the highest subnational unit level (examples include \u2018state\u2019, \u2018governorate\u2019, \u2018province\u2019) from household surveys.</p><p><br></p><p>In 2013, the World Bank announced the goals of fighting poverty in all its forms by 2030 and promoting shared prosperity. Despite a remarkable progress made on reducing poverty in recent years, reaching the targets remains challenging. The decline in poverty has been uneven. The poverty reduction in recent years was dominated by the East Asia and Pacific (notably China and Indonesia) and South Asia (notably India) (World Bank, 2017). Despite the progress made so far, the number of extreme poor remains high, especially in Sub-Saharan Africa. In many countries, vast differences in poverty levels persist at the subnational level. In addition, global problems such as climate change, fragility, economic crises and food security pose great risks for poverty reduction, and they are often trans-border issues, which generate strong positive or negative externalities across neighboring countries.</p>",
+        "dataset_id": " ",
+        "project_id": null
+    },
+    {
+        "name": "Harmonized Sub-National Food Security Data",
+        "description": "<p>FEWS NET produces food security classifications at the sub-national level, specifically at the intersection of livelihood zones and administrative uni<span style=\"color: black;\">ts. FEWS NET data is compatible with the Integrated Food Security Phase Classification protocol, but the data is produced independently from the IPC multi-partner consensus group.</span></p><p><span style=\"color: black;\">Because of the spatial mismatch between shapefiles across different timesteps in the FEWS NET data, the World Bank's Data Group developed a process to merge food security data into consistent spatial units sourced from FEWS NET. </span>A spatial join was conducted to assign the mode (or majority) food security phase value to each administrative unit. <span style=\"color: black;\">This dataset contains IPC-compatible phases (current situation and projections) and population estimates, by sub-national area determined by FEWS NET.</span></p><p>The dataset covers all countries monitored by FEWS NET (roughly 20 countries), with assessments available since 2009 on a tri-annual basis. The DECSC unit provides support to update this dataset as soon as the source shapefiles are readily available. The dataset is available to the public and the original inputs are also publicly available through FEWS NET and the Gridded Population of the World (v4).</p>",
+        "dataset_id": "0064614",
+        "project_id": null
+    },
+    {
+        "name": "Central Asia Flood vulnerability curves - crops",
+        "description": "<p>Central Asia Flood vulnerability curves - crops. Developed as part of the Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia program. (<a href=\"https://www.gfdrr.org/en/program/SFRARR-Central-Asia\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.gfdrr.org/en/program/SFRARR-Central-Asia</a>)</p>",
+        "dataset_id": "0064241",
+        "project_id": "P168309"
+    },
+    {
+        "name": "Central Asia Flood Vulnerability",
+        "description": "<p>Data from the EU-funded 'Strengthening Financial Resilience and Accelerating Risk Reduction in Central Asia' Program. (<a href=\"https://www.gfdrr.org/en/program/SFRARR-Central-Asia\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.gfdrr.org/en/program/SFRARR-Central-Asia</a>).</p><p>Flood vulnerability curves for buildings, infrastructure, crops, and population. The analytical approach is described in the accompanying technical report.</p><p><br></p><p>\u0414\u0430\u043d\u043d\u044b\u0435 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u044b \u0432 \u0440\u0430\u043c\u043a\u0430\u0445 \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u044b \u0423\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u044f \u0424\u0438\u043d\u0430\u043d\u0441\u043e\u0432\u043e\u0439 \u0423\u0441\u0442\u043e\u0439\u0447\u0438\u0432\u043e\u0441\u0442\u0438 \u0438 \u0423\u0441\u043a\u043e\u0440\u0435\u043d\u0438\u044f \u0421\u043d\u0438\u0436\u0435\u043d\u0438\u044f \u0420\u0438\u0441\u043a\u0430 \u0411\u0435\u0434\u0441\u0442\u0432\u0438\u0439 \u0432 \u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u043e\u0439 \u0410\u0437\u0438\u0438, \u0444\u0438\u043d\u0430\u043d\u0441\u0438\u0440\u0443\u0435\u043c\u043e\u0439 \u0415\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u043a\u0438\u043c \u0441\u043e\u044e\u0437\u043e\u043c.&nbsp;&nbsp;(<a href=\"https://www.gfdrr.org/en/program/UFUUSR-tsentralnoy-azii\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"background-color: rgb(255, 255, 255); color: rgb(0, 113, 188);\">https://www.gfdrr.org/en/program/UFUUSR-tsentralnoy-azii</a>).</p><p>\u041a\u0440\u0438\u0432\u044b\u0435 \u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u0438 \u043e\u0442 \u043d\u0430\u0432\u043e\u0434\u043d\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0437\u0434\u0430\u043d\u0438\u0439, \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u044b, \u0441\u0435\u043b\u044c\u0441\u043a\u043e\u0445\u043e\u0437\u044f\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0445 \u043a\u0443\u043b\u044c\u0442\u0443\u0440 \u0438 \u043d\u0430\u0441\u0435\u043b\u0435\u043d\u0438\u044f. \u0410\u043d\u0430\u043b\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u043e\u0434\u0445\u043e\u0434 \u043e\u043f\u0438\u0441\u0430\u043d \u0432 \u043f\u0440\u0438\u043b\u0430\u0433\u0430\u0435\u043c\u043e\u043c \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u043c \u043e\u0442\u0447\u0435\u0442\u0435.</p>",
+        "dataset_id": "0064115",
+        "project_id": "P168309"
+    },
+    {
+        "name": "Zambia Malnutrition 2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province 2018 (underweight children under 5 years old). Data collected by the Zambia Statistics Agency in partnership with the Ministry of Health; the University Teaching Hospital Virology Laboratory (UTH-VL); and the Department of Population Studies at the University of Zambia (UNZA) under the overall guidance of the National Steering Committee. Funding provided by USAID, the Global Fund, DFID and UNFPA and technical assistance provided by ICF through the DHS Program. Data published in \"Zambia Demographic and Health Survey 2018.\"</p>",
+        "dataset_id": "0064043",
+        "project_id": null
+    },
+    {
+        "name": "Uganda Malnutrition 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2016 (underweight children under 5 years old).&nbsp;Data collected by the Uganda Bureau of Statistics with financial support from USAID, UNICEF and UNFPA and technical assistance from ICF through the DHS Program. Data published in \"Uganda Demographic and Health Survey 2016.\"</p>",
+        "dataset_id": "0064040",
+        "project_id": null
+    },
+    {
+        "name": "Togo Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2017 (underweight children under 5 years old). Data collected by the National Institute of Statistics and Economic and Demographic Studies (INSEED) in collaboration with the Ministry of Health, with financial support from UNICEF and UNFPA  and technical support from UNICEF. Data collected as part of the MICS surveys and published in \" TOGO MICS6 2017 Enqu\u00eate par grappes \u00e0 indicateurs multiples.\"</p>",
+        "dataset_id": "0064038",
+        "project_id": null
+    },
+    {
+        "name": "Timor Leste Malnutrition 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by municipality 2016 (underweight children under 5 years old).&nbsp;Data collected by the General Directorate of Statistics (GDS), Ministry of Planning and Finance in collaboration with the Ministry of Health, with financial support from USAID, UNFPA, UNICEF, WHO, the European Union and the World Bank and technical assistance from IFC through the DHS Program. Data published in \"Timor Leste Demographic and Health Survey 2016.\"</p>",
+        "dataset_id": "0064035",
+        "project_id": null
+    },
+    {
+        "name": "Tanzania Irrigation 2014-2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of irrigated land in hectares  by region 2014-2015. Data collected by the National Bureau of Statistics (NBS) in collaboration with the Ministry of Agriculture, Livestock and Fisheries, the Ministry of Industry, Trade and Investment; the President\u2019s Office, the Regional Administration and Local Government (PO/RALG), the Office of the Chief Government Statistician, (OCGS), the Ministry of Agriculture and Natural Resources Zanzibar and the Ministry of Livestock and Fisheries Zanzibar. Data published in \"2014/2015 Annual Agricultural Sample Survey - Report.\"</p>",
+        "dataset_id": "0064028",
+        "project_id": null
+    },
+    {
+        "name": "Tanzania Malnutrition 2015 - 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2015-2016 (underweight children under 5 years old). Data collected by the National Bureau of Statistics (NBS) and Office of the Chief Government Statistician (OCGS), Zanzibar, in collaboration with the Ministry of Health, Community Development, Gender, Elderly and Children, Mainland, and the Ministry of Health, Zanzibar with financial support from USAID, Global Affairs Canada, Irish Aid, UNICEF and UNFPA and technical assistance from ICF. Data published in \"Tanzania Demographic and Health Survey and Malaria Indicator Survey 2015-2016 Final Report.\"&nbsp;</p>",
+        "dataset_id": "0064027",
+        "project_id": null
+    },
+    {
+        "name": "Tajikistan Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2017 (underweight children under 5 years old). Data collected by the Statistical Agency under the President of the Republic of Tajikistan with financial support from USAID, UNICEF and UNFPA and technical support from ICF, provided through the DHS Program. Data published in \"Tajikistan Demographic and Health Survey 2017.\"</p>",
+        "dataset_id": "0064026",
+        "project_id": null
+    },
+    {
+        "name": "Tajikistan Population 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of population and population density by region 2017. Data produced by the Statistical Agency under President of the Republic of Tajikistan with participation of key Ministries and Departments (Ministry of Finance, Ministry of Health and Social Protection of Population, Ministry of Labor, Migration and Employment, Ministry of Education and Science, Ministry of Transport, Hydro-meteorological Agency under the Committee for Nature and Forestry Protection of the Republic of Tajikistan. Data published in \"Food Security and Poverty \u21162 - 2018.\"</p>",
+        "dataset_id": "0064025",
+        "project_id": null
+    },
+    {
+        "name": "Tajikistan Poverty 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of poverty by region 2017. Data produced by the Statistical Agency under President of the Republic of Tajikistan with participation of key Ministries and Departments (Ministry of Finance, Ministry of Health and Social Protection of Population, Ministry of Labor, Migration and Employment, Ministry of Education and Science, Ministry of Transport, Hydro-meteorological Agency under the Committee for Nature and Forestry Protection of the Republic of Tajikistan. Data published in \"Food Security and Poverty \u21162 - 2018.\"</p>",
+        "dataset_id": "0064024",
+        "project_id": null
+    },
+    {
+        "name": "Sierra Leone Malnutrition 2019 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province 2018 (underweight children under 5 years old). Data collected by Statistics Sierra Leone on behalf of the Sierra Leone Ministry of Health and Sanitation with financial support from USAID, the Global Fund, DFID, UNFPA, the World Health Organization (WHO), and the World Bank and technical support from ICF through the DHS Program. Data published in \"Sierra Leone Demographic and Health Survey 2019\"</p>",
+        "dataset_id": "0064023",
+        "project_id": null
+    },
+    {
+        "name": "Senegal Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2017 (underweight children under 5 years old).  Data collected by the National Agency for Statistics and Demography (ANSD) in collaboration with the Ministry of Health and Social Action (MSAS) with financial support from USAID, Senegal Malnutrition Control Unit, World Bank, UNICEF, UNFPA, and Nutrition International and technical assistance from the DHS Program, ICF.&nbsp;</p>",
+        "dataset_id": "0064009",
+        "project_id": null
+    },
+    {
+        "name": "Rwanda Malnutrition 2014-2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2014-2015 (underweight children under 5 years old). Data collected by by the National Institute of Statistics of Rwanda (NISR) with technical assistance from ICF International and financial support from USAID, One UN, the Global Fund to Fight AIDS, Tuberculosis and Malaria (Global Fund), World Vison International, the Swiss Agency for Development and Cooperation (SDC), and the Partners in Health (PIH).  Data published in Rwanda Demographic and Health Survey 2014-15 Final Report.</p>",
+        "dataset_id": "0064008",
+        "project_id": null
+    },
+    {
+        "name": "Lao PDR Maize Production 2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of maize production by province 2018. Data collected by the Department of Planning and Cooperation, Ministry of Agriculture and Forestry and published in \"Statistical Yearbook 2018.\"</p>",
+        "dataset_id": "0064004",
+        "project_id": null
+    },
+    {
+        "name": "Lao PDR Rice Production 2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of rice production by province 2018. Data collected by the Department of Planning and Cooperation, Ministry of Agriculture and Forestry and published in \"Statistical Yearbook 2018.\"</p>",
+        "dataset_id": "0064003",
+        "project_id": null
+    },
+    {
+        "name": "Niger Food Insecurity 2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of food insecurity by region 2014. Data collected by the Dispositif National de Pr\u00e9vention et de Gestion des Crises Alimentaires (DNPGCA)&nbsp;and the Niger Institut National de la Statistique (INS) with technical and financial support from WFP, UNDP, FAO, Save the Children and FEWS Net. Data published in&nbsp;<span style=\"color: rgb(95, 99, 104);\">Enqu\u00eate Conjointe sur</span><span style=\"color: rgb(77, 81, 86);\">&nbsp;la&nbsp;</span><span style=\"color: rgb(95, 99, 104);\">Vulnerabilit\u00e9 \u00e0</span><span style=\"color: rgb(77, 81, 86);\">&nbsp;l'</span><span style=\"color: rgb(95, 99, 104);\">Insecurit\u00e9 Alimentaire des Menages au Niger - </span>&nbsp;D\u00e9cembre 2014/ Janvier 2015,</p>",
+        "dataset_id": "0063455",
+        "project_id": null
+    },
+    {
+        "name": "Niger Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region 2017 (underweight children under 5 years old). Data collected by <span style=\"color: rgb(95, 99, 104);\">Institut National de la Statistique</span><span style=\"color: rgb(77, 81, 86);\">&nbsp;du&nbsp;</span><span style=\"color: rgb(95, 99, 104);\">Niger a</span>nd published in \"Enqu\u00eate D\u00e9mographique et de Sant\u00e9 du Niger EDSN-V 2017.\"</p>",
+        "dataset_id": "0063396",
+        "project_id": null
+    },
+    {
+        "name": "Nepal Livestock Inventory 2013-2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of livestock inventory (cattle, buffalo, goat) by district 2013 - 2014. Data collected by the Ministry of Agricultural Development and published in \"Statistical Information on Nepalese Agriculture 2013-2014.\"</p>",
+        "dataset_id": "0063395",
+        "project_id": null
+    },
+    {
+        "name": "Nepal Rice Production 2015 - 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of rice production by district 2015 - 2016. Data collected by the Ministry of Agricultural Development and published in \"Statistical Information on Nepalese Agriculture 2015-2016.\"</p>",
+        "dataset_id": "0063394",
+        "project_id": null
+    },
+    {
+        "name": "Nepal Irrigation 2010 - 2011 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of irrigation (total irrigated area) by district 2010 - 2011. Data collected by the Ministry of Agricultural Development and published in \"Statistical Information on Nepalese Agriculture 2011-2012.\"</p>",
+        "dataset_id": "0063393",
+        "project_id": null
+    },
+    {
+        "name": "Nepal Malnutrition 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by development region 2016 (underweight children under 5 years old). Data collected by Ministry of Health - MOH/Nepal, New ERA/Nepal, and ICF and published in \"Nepal Demographic and Health Survey 2016\"</p>",
+        "dataset_id": "0063385",
+        "project_id": null
+    },
+    {
+        "name": "Mongolia Livestock Inventory 2019 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of livestock by aimag 2019. Data collected by the National Statistics Office of Mongolia and published in Mongolian Statistical Information Service - Number of Livestock by type, by region, bag, soum, aimag and the Capital http://1212.mn/</p>",
+        "dataset_id": "0063383",
+        "project_id": null
+    },
+    {
+        "name": "Mongolia Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition (underweight children under 5 years old) by region 2017. Data collected by the Ministry of Health and the National Center for Public Health, with technical and financial support from the United Nations Children's Fund (UNICEF) and published in \"Nutrition Status of the Mongolian Population: Fifth National Nutrition Survey.\" </p>",
+        "dataset_id": "0063380",
+        "project_id": null
+    },
+    {
+        "name": "Mali Malnutrition 2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition (underweight children under 5 years old) by region 2018. Data collected by Institut National de la Statistique - INSTAT, Cellule de Planification et de Statistique Secteur Sant\u00e9-D\u00e9veloppement Social et Promotion de la Famille CPS/SS-DS-PF and ICF. Data published in \"Enqu\u00eate D\u00e9mographique et de Sant\u00e9 2018 Indicateurs Cl\u00e9s\"</p>",
+        "dataset_id": "0063377",
+        "project_id": null
+    },
+    {
+        "name": "Malawi Malnutrition 2015-2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition (underweight children under 5 years old) by region 2016-2016. Data collected by the Malawi National Statistical Office (NSO) and ICF and published in \"Malawi Demographic and Health Survey 2015-2016.\"</p>",
+        "dataset_id": "0063374",
+        "project_id": null
+    },
+    {
+        "name": "Malawi Food Security 2011 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of food security by district 2011. Data collected by Malawi National Statistical Office (NSO), with technical and financial support from World Bank, Norwegian Government, Irish Aid, International Food Policy Research Institute (IFPRI), GIZ and Department for International Development (DfID). Data published in \"Integrated Household Survey (IHS3) 2010-2011. Household Socio-economic Characteristics Report\"</p>",
+        "dataset_id": "0063371",
+        "project_id": null
+    },
+    {
+        "name": "Liberia Cassava Production 2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of cassava production by county 2015. Data collected by Liberia Institute of Statistics and Geo-Information Services (LISGS) and&nbsp;published in \"Liberia Annual Food Crop Production Survey 2014 and 2015&nbsp;HIES Component.\"</p>",
+        "dataset_id": "0063370",
+        "project_id": null
+    },
+    {
+        "name": "Liberia Rice Production 2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of rice production by county 2015. Data collected by Liberia Institute of Statistics and Geo-Information Services (LISGS) and&nbsp;published in \"Liberia Annual Food Crop Production Survey 2014 and 2015&nbsp;HIES Component.\"</p>",
+        "dataset_id": "0063369",
+        "project_id": null
+    },
+    {
+        "name": "Liberia Food Insecurity 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of food insecurity by region 2016. Data collected by Liberia Institute of Statistics and Geo-Information Services (LISGS) with support from the World Bank, the European Union, the Swedish International Development Corporation Agency, the United States Agency for International Development and the African Development Bank. Data&nbsp;published in \"Liberia&nbsp;Household Income Expenditure Survey (HIES) 2016 Statistical Abstract.\"</p>",
+        "dataset_id": "0063368",
+        "project_id": null
+    },
+    {
+        "name": "Trade Policy Monitoring",
+        "description": "<p>The purpose of this initiative is to collect information on changes in trade policy towards export and imports of essential goods (including food and fertilizers), and other key inputs that are exported by Russia and Ukraine (fuels and raw materials), to document the cumulative resort to trade policies since the beginning of the 2022. Information on trade policy changes is collected and collated by The Global Trade Alert and the World Bank on a monthly basis. Figures summarizing some of the features of the cumulative policy response are prepared as well. Current multilateral trade rules allow governments to implement trade restrictions under certain conditions. This monitoring exercise does not take a position on the consistency of a jurisdiction\u2019s trade restrictions with World Trade Organization rules or with relevant regional trade agreement obligations.</p>",
+        "dataset_id": "0063367",
+        "project_id": null
+    },
+    {
+        "name": "Liberia Malnutrition 2019 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by county 2019 (underweight children under 5 years). Data collected by Liberia Institute of Statistics and Geo-Information Services (LISGS), Ministry of Health and ICF and published in \"Liberia Demographic and Health Survey 2019-2020.\"</p>",
+        "dataset_id": "0063339",
+        "project_id": null
+    },
+    {
+        "name": "Lao PDR Malnutrition 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province (underweight children under 5 years). Data collected the Lao Statistics Bureau (LSB) in collaboration with Ministry of Health and Ministry of Education and Sport with technical support of UNICEF and financial support of UNICEF, UNFPA, European Union (EU), Luxembourg Government, USAID, Swiss Development Cooperation (SDC), WFP, UNDP, WHO, and the Japanese International Cooperation Agency (JICA).&nbsp;Data published in \"Lao PDR Lao Social Indicator Survey II (LSIS II) 2017.\"</p>",
+        "dataset_id": "0063334",
+        "project_id": null
+    },
+    {
+        "name": "Kyrgyz Republic Agriculture 2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of agriculture production (wheat, corn, potatoes, totals) 2015. Data collected by the National Statistical Committee of the Kyrgyz Republic and published in http://www.stat.kg/en/statistics/selskoe-hozyajstvo/ 1.05.02.07 Cultivated area of agricultural crops in all categories of farms in the territory.</p>",
+        "dataset_id": "0063333",
+        "project_id": null
+    },
+    {
+        "name": "Kyrgyz Republic Malnutrition 2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by the National Statistical Committee of Kyrgyz Republic as part of the Global MICS Programme with technical support from UNICEF and financial support of UNICEF, USAID and UNFPA.&nbsp;Data published in \"Kyrgyzstan Multiple Indicator Cluster Survey 2018, Survey Findings Report.\"</p>",
+        "dataset_id": "0063330",
+        "project_id": null
+    },
+    {
+        "name": "Kenya Malnutrition 2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by county (underweight children under 5 years). Data collected by Kenya National Bureau of Statistics, Ministry of Health/Kenya, National AIDS Control Council/Kenya, Kenya Medical Research Institute, National Council for Population and Development/Kenya, and ICF International and published in \"Kenya Demographic and Health Survey 2014.\"</p>",
+        "dataset_id": "0063326",
+        "project_id": null
+    },
+    {
+        "name": "Honduras Malnutrition 2011-21012 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by department (underweight children under 5 years). Data collected by Secretaria de Salud de Honduras, Instituto Nacional de Estadistica INE and ICF International and published in \"Encuesta Nacional de Demograf\u00eda y Salud ENDESA 2011-2012.\"</p>",
+        "dataset_id": "0063324",
+        "project_id": null
+    },
+    {
+        "name": "Haiti Malnutrition 2016-2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by department (underweight children under 5 years). Data collected by <span style=\"background-color: rgb(230, 230, 230); color: rgb(108, 100, 99);\">Institut Ha\u00eftien de l\u2019Enfance - IHE and ICF</span> and published in \"Enqu\u00eate Mortalit\u00e9, Morbidit\u00e9 et Utilisation des Services (EMMUS-VI) 2016-17.\"</p>",
+        "dataset_id": "0063321",
+        "project_id": null
+    },
+    {
+        "name": "The Gambia Malnutrition 2013 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of of malnutrition by local government area (underweight children under 5 years). Data collected by the Gambia Bureau of Statistics (GBoS) and ICF International and published in \"The Gambia Demographic and Health Survey 2013.\"</p>",
+        "dataset_id": "0061976",
+        "project_id": null
+    },
+    {
+        "name": "The Gambia Malnutrition 2018 - Percentage of Underweight Children under 5 years - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by local government area (underweight children under 5 years). Data collected by the Gambia Bureau of Statistics (GBoS) with support from UNICEF and published in \"<a href=\"https://mics-surveys-prod.s3.amazonaws.com/MICS6/West%20and%20Central%20Africa/Gambia/2018/Survey%20findings/The%20Gambia%202018%20MICS%20Survey%20Findings%20Report_English.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">The Gambia Multiple Indicator Cluster Survey 2018, Survey Findings Report</a>.\"</p><p><br></p><p>Full details and data for \"<a href=\"https://microdata.worldbank.org/index.php/catalog/4154\" rel=\"noopener noreferrer\" target=\"_blank\">The Gambia Multiple Indicator Cluster Survey 2018</a>\" is available in the Microdata Library catalog.</p>",
+        "dataset_id": "0061975",
+        "project_id": null
+    },
+    {
+        "name": "Ethiopia Malnutrition 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by the Central Statistical Agency and the DHS Program and published in \"Ethiopia Demographic and Health Survey 2016 - Key Indicators Report\".</p>",
+        "dataset_id": "0061968",
+        "project_id": null
+    },
+    {
+        "name": "Ethiopia Malnutrition 2019 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by the Ethiopian Health Institute, the Federal Ministry of Health and the DHS Program and published in \"Ethiopia Mini Demographic and Health Survey 2019 - Key Indicators\".</p>",
+        "dataset_id": "0061967",
+        "project_id": null
+    },
+    {
+        "name": "Cambodia Malnutrition 2010 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province (underweight children under 5 years). Data collected by the National Institute of Statistics - Ministry of Planning, the Directorate General for Health - Ministry of Health and Measure DHS in \"Cambodia Demographic and Health Survey 2010\".</p>",
+        "dataset_id": "0061965",
+        "project_id": null
+    },
+    {
+        "name": "Cambodia Malnutrition 2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province (underweight children under 5 years). Data collected by the National Institute of Statistics - Ministry of Planning, the Directorate General for Health - Ministry of Health and the DHS Program and published in \"Cambodia Demographic and Health Survey 2014\".</p>",
+        "dataset_id": "0061964",
+        "project_id": null
+    },
+    {
+        "name": "Cambodia Poverty 2013 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of poverty by province 2013. Data produced by the National Institute of Statistics, Ministry of Planning and the UN WFP and published in \"Small Area Estimation of Poverty and Malnutrition in Cambodia\".</p>",
+        "dataset_id": "0061960",
+        "project_id": null
+    },
+    {
+        "name": "Cambodia Rice Production 2013 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of rice production by province 2013. Data collected by the National Institute of Statistics, Ministry of Planning in collaboration with the Ministry of Agriculture, Forestry and Fisheries and published in the \"Census of Agriculture in Cambodia 2013 - Final Report\".</p>",
+        "dataset_id": "0061959",
+        "project_id": null
+    },
+    {
+        "name": "Cambodia Irrigation 2013 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of irrigated area by province in hectares 2013. Data collected by the National Institute of Statistics, Ministry of Planning in collaboration with the Ministry of Agriculture, Forestry and Fisheries and published in the \"Census of Agriculture in Cambodia 2013 - Final Report\".</p>",
+        "dataset_id": "0061958",
+        "project_id": null
+    },
+    {
+        "name": "Bhutan Irrigation 2010 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of irrigated area in hectares 2010. Data collected by the Ministry of Agriculture and Forests - Royal Government of Bhutan and published in \"Technical Report Bhutan Land Cover Assessment 2010 (LCMP-2010)\" and \"Statistical Yearbook of Bhutan 2019\".</p>",
+        "dataset_id": "0061952",
+        "project_id": null
+    },
+    {
+        "name": "Bhutan Malnutrition 2015 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by d<span style=\"color: rgb(32, 33, 36);\">zongkhag </span>(underweight children under 5 years). Data collected by the Nutrition Programme Department of Public Health Ministry of Health Bhutan and published in \"2015 National Nutrition Survey\".</p>",
+        "dataset_id": "0061948",
+        "project_id": null
+    },
+    {
+        "name": "Bhutan Malnutrition 2010 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by dzongkhag (underweight children under 5 years). Data collected by the National Statistics Bureau, UNICEF, UNFPA and published in \"Bhutan Multiple Indicator Survey 2010\".</p>",
+        "dataset_id": "0061947",
+        "project_id": null
+    },
+    {
+        "name": "Burundi Cattle Inventory 2012 -2013 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of livestock inventory (cattle, sheep, goats, pigs) by province 2012 -2013. Data collected by the Institut de Statistiques et d Etudes Economiques du Burundi (ISTEEBU) and published in \"Les Cahiers de l'ISTEEBU. Analyses th\u00e9matiques \u00e0 partir des donn\u00e9es d enqu\u00eates r\u00e9alis\u00e9es au sein du Syst\u00e8me Statistique National. Volume 1, N\u00b001, Juin 2016.\"</p>",
+        "dataset_id": "0061940",
+        "project_id": null
+    },
+    {
+        "name": "Burundi Malnutrition 2016 - 2017 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by province (underweight children under 5 years). Data collected by the Institut de Statistiques et d'\u00c9tudes \u00c9conomiques du Burundi (ISTEEBU) and the DHS Program and published in \"Troisi\u00e8me Enqu\u00eate D\u00e9mographique et de Sant\u00e9 au Burundi (EDSB-III) 2016-2017- Indicateurs Cl\u00e9s\".</p>",
+        "dataset_id": "0061934",
+        "project_id": null
+    },
+    {
+        "name": "Burundi Malnutrition 2010 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by Institut de Statistiques et d\u2019\u00c9tudes \u00c9conomiques du Burundi, Institut National de Sant\u00e9 Publique Minist\u00e8re de la Sant\u00e9 Publique et de la Lutte contre le Sida, MEASURE DHS and published in \"Enqu\u00eate D\u00e9mographique et de Sant\u00e9 Burundi 2010\".</p>",
+        "dataset_id": "0061933",
+        "project_id": null
+    },
+    {
+        "name": "Burkina Faso Malnutrition 2016 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by the Minist\u00e8re de la Sant\u00e9 Burkina Faso and published in \"Enqu\u00eate Nutritionnelle Nationale 2016 -Rapport Final\".</p>",
+        "dataset_id": "0061928",
+        "project_id": null
+    },
+    {
+        "name": "Burkina Faso Malnutrition 2010 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by region (underweight children under 5 years). Data collected by the Institut National de la Statistique et de la D\u00e9mographie (INSD) Minist\u00e8re de l\u2019\u00c9conomie et des Finances and ICF International and published in \"Enqu\u00eate D\u00e9mographique et de Sant\u00e9 et \u00e0 Indicateurs Multiples (EDSBF-MICS IV) 2010\".</p>",
+        "dataset_id": "0061927",
+        "project_id": null
+    },
+    {
+        "name": "Benin Malnutrition 2017-2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by department 2017-2018 (underweight children under 5 years). Data collected by the Institut National de la Statistique et de l\u2019Analyse \u00c9conomique (INSAE)&nbsp;and ICF and published in \"Cinqui\u00e8me Enqu\u00eate D\u00e9mographique et de Sant\u00e9 au B\u00e9nin (EDSB-V) - Indicateurs Cl\u00e9s\".</p>",
+        "dataset_id": "0061926",
+        "project_id": null
+    },
+    {
+        "name": "Benin Malnutrition 2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by department (underweight children under 5 years). Data collected by the Institut National de la Statistique et de l\u2019Analyse \u00c9conomique (INSAE)&nbsp;and UNICEF and published in \"Enqu\u00eate par grappes \u00e0 indicateurs multiples MICS 2014, Rapport final\".</p>",
+        "dataset_id": "0061925",
+        "project_id": null
+    },
+    {
+        "name": "Benin Malnutrition 2011 - 2012 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by division (underweight children under 5 years). Data collected by the Institut National de la Statistique et de l\u2019Analyse \u00c9conomique (INSAE)&nbsp;and ICF International and published in \"Enqu\u00eate D\u00e9mographique et de Sant\u00e9 et \u00e0 Indicateurs Multiples du B\u00e9nin EDS-MICS-IV 2011-2012 - Rapport Preliminaire\".</p>",
+        "dataset_id": "0061924",
+        "project_id": null
+    },
+    {
+        "name": "Bangladesh Malnutrition 2019 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by division (underweight children under 5 years). Data collected by the Bangladesh Bureau of Statistics BBS and UNICEF and published in \"Multiple Indicator Cluster Survey 2019 - Survey Findings Report\".</p>",
+        "dataset_id": "0061913",
+        "project_id": null
+    },
+    {
+        "name": "Bangladesh Malnutrition 2017-2018 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by division (underweight children under 5 years). Data collected by the Ministry of Health and Family Welfare and the DHS Program and published in \"Bangladesh Demographic and Health Survey 2017-2018 Key Indicators\".</p>",
+        "dataset_id": "0061912",
+        "project_id": null
+    },
+    {
+        "name": "Bangladesh Malnutrition 2014 - Table Extract",
+        "description": "<p>Gathered for the GAFSP Open Data Services activity. This file contains summary statistics of malnutrition by division (underweight children under 5 years). Data collected by the National Institute of Population Research and Training,, Ministry of Health and Family Welfare, Mitra Associates and the DHS Program and published in the \"Bangladesh Demographic and Health Survey 2014\".</p>",
+        "dataset_id": "0061911",
+        "project_id": null
+    },
+    {
+        "name": "Global Gridded Agricultural Gross Domestic Product (AgGDP)",
+        "description": "<p><span style=\"color: rgb(0, 0, 0);\">The global high resolution gridded Agricultural GDP (corresponding to \"agriculture, forestry, and fishing, value added\" in World Development Indicators, henceforth AgGDP, dataset at approximately 10x10 km is the result of a data fusion method based on cross-entropy optimization. We disaggregate national and subnational administrative statistics of Agricultural GDP (circa 2010) into the global gridded dataset at using satellite-derived indicators of the components that make up agricultural GDP, namely crop, livestock, fishery, hunting and timber production.\u202fThe data resources include the gridded global estimates at approximately 10x10 km </span></p>",
+        "dataset_id": "0061507",
+        "project_id": "P101196"
+    },
+    {
+        "name": "Ukraine - Land Use",
+        "description": "<p>Land use classification extracted from OpenStreetMap in April 2022.</p>",
+        "dataset_id": "0061443",
+        "project_id": null
+    },
+    {
+        "name": "Food Prices for Nutrition",
+        "description": "<p><span style=\"color: rgb(68, 68, 68);\">Food Prices for Nutrition provides indicators on the cost and affordability of healthy diets in each country, showing the population\u2019s physical and economic access to sufficient quantities of locally available items for an active and healthy life. It also provides indicators on the cost and affordability of an energy-sufficient diet and of a nutrient-adequate diet. These indicators are explained in detail in the </span><span style=\"color: rgb(23, 43, 77);\">associated </span><span style=\"color: rgb(68, 68, 68);\">Food Prices for Nutrition DataHub here: </span><a href=\"https://www.worldbank.org/foodpricesfornutrition\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: rgb(68, 68, 68);\">https://www.worldbank.org/foodpricesfornutrition</a><span style=\"color: rgb(68, 68, 68);\">. </span>The database version Food Prices for Nutrition 1.0 houses indicators estimated in July 2022, when relevant affordability indicators were calculated based on the available Poverty and Inequality Platform (PIP) data from the World Bank expressed in 2011 purchasing power parity terms (PPP). These include indicators measuring the affordability of each diet as a ratio of the cost of the diet to the food poverty line and indicators measuring the share and volume of the population unable to afford each diet based on income distributions observed in each country. Note that the Cost and Affordability of a Healthy Diet indicators reported in the State of Food Security and Nutrition in the World 2022 correspond to those in version 1.0.The database version Food Prices for Nutrition 1.1 updates these aforementioned affordability indicators using the latest PIP data expressed in 2017 PPP-based dollars. For more details about the PIP update, please visit https://pip.worldbank.org/about. The database version Food Prices for Nutrition 2.0, estimated in July 2023, uses the latest PIP data expressed in 2017-PPP-based dollars. The Cost and Affordability of a Healthy Diet indicators reported in the State of Food Security and Nutrition in the World 2023 correspond to those in version 2.0.</p>",
+        "dataset_id": "0061222",
+        "project_id": null
+    },
+    {
+        "name": "Afghanistan asset exposure",
+        "description": "<p>Collection of exposure datasets for risk assessment purpose in Afghanistan. Includes:<br />\n- Location, area and USD value of rainfed and irrigated agricultural crops.<br />\n- Total exposure value of buildings for different occupancy types: urban and rural structures, residential, non-residential, and industrial area. Values expressed as replacement cost (USD), area (m2), or number of elements (count).<br />\n- Location, count and USD value (when available) for the following infrastructures in Afghanistan: airports, bridges, dams, health centers, hospitals, power plants, roads, schools and universities.<br />\n- Population count and GDP value in USD for three macrosectors (Industry, Agriculture and Services) in Afghanistan.</p>\n",
+        "dataset_id": "0050638",
+        "project_id": null
+    },
+    {
+        "name": "World Bank Group Archives Holdings",
+        "description": "<p>This dataset contains the set of metadata describing the World Bank's Archival Holdings, including links to the URLs of digitized content where available.&nbsp;The metadata consists of archival descriptions authored by World Bank Group Archives staff. These descriptions follow the International Standard for Archival Description (ISAD[g]) descriptive standard. This metadata is available electronically in our online catalog, available here: <a href=\"https://archivesholdings.worldbank.org/\" rel=\"noopener noreferrer\" target=\"_blank\">https://archivesholdings.worldbank.org/</a>. The catalog is added to on a regular basis.&nbsp;&nbsp;</p><p><br></p><p>The Archives contains the administrative and operational records created by the World Bank, and offers access to this vast amount of original primary source research material to the public according to its Access to Information Policy. Dating from 1944, the Bank's records provide evidence of all of the business activities of the Bank, including lending operations, policy decision making, relations with donor and client countries, and administration. More information about the Archives Holdings can be found here: https://archivesholdings.worldbank.org/about-our-records-and-finding-aids</p><p><br></p><p>The dataset follows the Open Archives Initiative Protocol for Metadata Harvesting standard.&nbsp;&nbsp;API documentation is available here: <a href=\"https://www.accesstomemory.org/en/docs/2.6/dev-manual/api/api-intro/\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.accesstomemory.org/en/docs/2.6/dev-manual/api/api-intro/</a></p>",
+        "dataset_id": "0050617",
+        "project_id": null
+    },
+    {
+        "name": "Irrigation Potential in Romania ",
+        "description": "<p>The aim of the project was to map and estimate the potential and suitability of selected areas of interest<br />\nfor the implementation of irrigation projects.</p>\n<p>This project was supported by ESA (European Space Agency) through the EO Clinic program. For more information about the Earth Observation Clinic, please visit: <a href=\"https://beta.datapartnership.org/datapartner/10\">https://beta.datapartnership.org/datapartner/10</a></p>\n",
+        "dataset_id": "0043631",
+        "project_id": null
+    },
+    {
+        "name": "Landcover mapping in Sulawesi",
+        "description": "<p>Land cover maps were created to support disaster monitoring following a tsunami in October 2018. Seven dates of landocver maps were generated: September 2018, October 2018, January 2019, April 2019, October 2019, January 2020, and October 2020. For each cloud-free pixel, a pre-trained algorithm classified the landcover into the following classes: buildings, roads, forest, grassland/agriculture, water, barren, parking lots, golf courses, and mines. Data were created by Orbital Insight using Planet's 3-5 m resolution Planetscope imagery</p>\n",
+        "dataset_id": "0043556",
+        "project_id": null
+    },
+    {
+        "name": "South Sudan buildings and infrastructures",
+        "description": "<p>Exposure data representing location and type of settlments, land use, buildings, health facilities and roads from a combination of sources: Open Street Map, OCHA and World Bank.</p>\n",
+        "dataset_id": "0042416",
+        "project_id": "P170266"
+    },
+    {
+        "name": "Ramadi (Iraq) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Ramadi (Iraq) contains spatial explicit information about the different land covers / uses for current (2017) and past (2004) dates. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-4) over core urban areas covered by very high resolution satellite imagery.</p>\n",
+        "dataset_id": "0042349",
+        "project_id": "P161515"
+    },
+    {
+        "name": "Vietnam: Scenarios for Solar PV Deployment",
+        "description": "<p>The result of a geospatial analysis performed by the World Bank for assessing Vietnam\u2019s potential for solar PV deployment, ground mounting and floating. The analysis was performed using the MapRE tool and methodology developed by Berkley (<a href=\"http://mapre.lbl.gov/gis-tools/\">http://mapre.lbl.gov/gis-tools/</a>) and it made use of high accuracy Land Use/Land Cover data acquired from the client country. Three scenarios have been considered for ground mounting and two scenarios for floating solar, as described below.</p>\n",
+        "dataset_id": "0042345",
+        "project_id": null
+    },
+    {
+        "name": "Kigoma  (Tanzania) - Land Use/Land Cover Map (ESA EO4SD-Urban",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in Larger Urban areas of the City of Kigoma. The Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the larger Urban area was Landsat 5 (2005),  Sentinel-2 (2016), Very High Resolution (VHR) data of Quickbird-2 (2005) and Very High Resolution (VHR) data of Pleiades (2016).</p>\n",
+        "dataset_id": "0042324",
+        "project_id": "P111153"
+    },
+    {
+        "name": " Global Distribution of Economic Activity",
+        "description": "<p>Data for replicating The Global Spatial Distribution of Economic Activity: Nature, History, and the Role of Trade (forthcoming 2018; with Vernon Henderson, Tim Squires and David N. Weil) Quarterly Journal of Economics</p>\n<p>We explore the role of natural characteristics in determining the worldwide spatial distribution of economic activity, as proxied by lights at night, observed across 240,000 grid cells. A parsimonious set of 24 physical geography attributes explains 47% of worldwide variation and 35% of within-country variation in lights. We divide geographic characteristics into two groups, those primarily important for agriculture and those primarily important for trade, and confront a puzzle. In examining within-country variation in lights, among countries that developed early, agricultural variables incrementally explain over 6 times as much variation in lights as do trade variables, while among late developing countries the ratio is only about 1.5, even though the latter group is far more dependent on agriculture. Correspondingly, the marginal effects of agricultural variables as a group on lights are larger in absolute value, and those for trade smaller, for early developers than for late developers.  We show that this apparent puzzle is explained by persistence and the differential timing of technological shocks in the two sets of countries.  For early developers, structural transformation due to rising agricultural productivity began when transport costs were still high, so cities were localized in agricultural regions. When transport costs fell, these agglomerations persisted. In late-developing countries, transport costs fell before structural transformation. To exploit urban scale economies, manufacturing agglomerated in relatively few, often coastal, locations. Consistent with this explanation, countries that developed earlier are more spatially equal in their distribution of education and economic activity than late developers.</p>\n<p>This dataset is part of the Global Research Program on Spatial Development of Cities funded by the Multi-Donor Trust Fund on Sustainable Urbanization of the World Bank and supported by the U.K. Department for International Development.</p>\n",
+        "dataset_id": "0042294",
+        "project_id": "P145658"
+    },
+    {
+        "name": "Estimates of Distortions to Agricultural Incentives",
+        "description": "<p>The World Bank research project on \"Distortions to Agricultural Incentives\"\u009d has produced a core database of Nominal Rates of Assistance to producers, or NRAs, together with a set of Consumer Tax Equivalents, or CTEs, for farm products and a set of Relative Rates of Assistance to farmers in 75 focus countries. The core database provides nominal rates of assistance estimates for the main individual commodities that together account for about 70 percent of the value of farm production in those countries, as well as guesstimates of the NRA for the 30 percent of farm production not covered. Also estimated is the NRA for non-agricultural tradables so as to compute a relative rate of assistance. Consumer tax equivalents are also provided for the covered products in each focus country, along with value of production and consumption at undistorted prices and of trade for each covered product and for non-covered farm products. The supplementary database on trade and welfare reduction indexes provides estimates of welfare and trade reduction indexes for each of the 75 countries.</p>\n",
+        "dataset_id": "0042293",
+        "project_id": null
+    },
+    {
+        "name": "WPS 8825 - Trading off the Income Gains and the Inequality Costs of Trade Policy",
+        "description": "<p>This paper characterizes the trade-off between the income gains and the inequality costs of trade using survey data for 54 developing countries. Tariff data on agricultural and manufacturing goods are combined with household survey data on detailed income and expenditure patterns to estimate the first-order effects of the elimination of import tariffs on household welfare. The paper assesses how these welfare effects vary across the distribution by estimating impacts on the consumption of traded goods, wage income, farm and non-farm family enterprise income, and government transfers. For each country, the income gains and the inequality costs of trade liberalization are quantified and the trade-offs between them are assessed using an Atkinson social welfare index. The analysis finds average income gains from import tariff liberalization in 45 countries and average income losses in nine countries. Across countries in the sample, the gains from trade are 1.9 percent of real household expenditure on average. We find overwhelming evidence of a trade-off between the income gains (losses) and the inequality costs (gains), which arise because trade tends to exacerbate income inequality: 45 countries face a trade-off, while only nine do not. The income gains typically more than offset the increase in inequality. In the majority of developing countries, the prevailing tariff structure thus induces sizable welfare losses</p>\n",
+        "dataset_id": "0042084",
+        "project_id": null
+    },
+    {
+        "name": "Crowdsourced Price Data Collection Pilot",
+        "description": "<p>Crowdsourced price data from 15 pilot countries, namely, Argentina, Bangladesh, Brazil, Cambodia, Colombia, Ghana, Indonesia, Kenya, Malawi, Nigeria, Peru, Philippines, South Africa, Venezuela and Vietnam; from December 2015 to August 2016 and covering 162 household good and service items.</p>\n<p>This database is a repository of information collected during a World Bank pilot study on the feasibility of crowdsourced price data collection utilizing modern information and communication technologies. The collected data can be used for a variety of spatial and temporal price studies and other price-related applications.</p>\n<p>The data was collected by leveraging a privately-operated network of paid on-the-ground contributors that had access to a smartphone application. Price collection tasks and related guidance was pushed through the application to specific geographical locations. The contributors carried out the requested collection tasks and submitted price data and other metadata using the application.</p>\n<p>The pilot was conducted in 15 pilot countries, namely, Argentina, Bangladesh, Brazil, Cambodia, Colombia, Ghana, Indonesia, Kenya, Malawi, Nigeria, Peru, Philippines, South Africa, Venezuela and Vietnam from December 2015 to August 2016. The collected price data covers 162 tightly specified household good and service items, including food and non-alcoholic beverages; alcoholic beverages and tobacco; clothing and footwear; housing, water, electricity, gas and other fuels; furnishings, household equipment and routine household maintenance; health; transport; communication; recreation and culture; education; restaurants and hotels; and miscellaneous goods and services.</p>\n<p>In total, the database includes 1,262,458 price observations, ranging from 196,188 observations for Brazil to 14,102 observations for Cambodia. The observations are accompanied by a rich set of metadata, including longitude and latitude coordinates and related geographical designations, time-stamps, outlet identifiers, volume and weight details, and brand and model information. Due to the pilot nature of this data, the survey coverage varies between and within countries. In addition, the comparability of price data for goods is typically more reliable than those for services.</p>\n<p>This database is a product of the World Bank Development Data Group. Use is subject to World Bank policies and procedures on access to information. Site-specific terms of use apply and are stated below.</p>\n",
+        "dataset_id": "0042083",
+        "project_id": "P040288"
+    },
+    {
+        "name": "WDR2013 Survey on Good Jobs",
+        "description": "<p>The Survey on Good Jobs gathers data on perceptions of jobs and how they vary with wealth, gender, income, labor status, sector of employment, experience and education level, constraints to accessing good jobs within the local context, barriers to labor market entry (which includes wage employment and self-employment in non-farm and farm activities) and potential solutions for these barriers (causes of joblessness/unemployment). It also gathers data on the valuation of the trade-off of various job characteristics (e.g., stability of income versus level of income, social insurance versus level of income) and how individuals view good jobs at a more aggregate level (the role of jobs in the community, society).</p>\n",
+        "dataset_id": "0042047",
+        "project_id": null
+    },
+    {
+        "name": "Global Subnational Poverty Atlas (GSAP)",
+        "description": "<p>This data entry includes lined-up subnational poverty estimates (based on international poverty line(s)) in 2019 for more than 168 economies at the administrative unit level 1. Administrative unit level 1 refers to the highest subnational unit level (examples include \u2018state\u2019, \u2018governorate\u2019, \u2018province\u2019) from household surveys.</p><p><br></p><p>In 2013, the World Bank announced the goals of fighting poverty in all its forms by 2030 and promoting shared prosperity. Despite a remarkable progress made on reducing poverty in recent years, reaching the targets remains challenging. The decline in poverty has been uneven. The poverty reduction in recent years was dominated by the East Asia and Pacific (notably China and Indonesia) and South Asia (notably India) (World Bank, 2017). Despite the progress made so far, the number of extreme poor remains high, especially in Sub-Saharan Africa. In many countries, vast differences in poverty levels persist at the subnational level. In addition, global problems such as climate change, fragility, economic crises and food security pose great risks for poverty reduction, and they are often trans-border issues, which generate strong positive or negative externalities across neighboring countries. </p>",
+        "dataset_id": "0042041",
+        "project_id": null
+    },
+    {
+        "name": "Mtwara (Tanzania) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in Larger Urban areas of the City of Mtwara. Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-5 (2005) / Sentinel-2 (2016).</p>\n",
+        "dataset_id": "0042019",
+        "project_id": "P111153"
+    },
+    {
+        "name": "El Salvador Land Use in 2010",
+        "description": "<p>This shapefile contains land use in El Salvador in 2010.</p>\n",
+        "dataset_id": "0042006",
+        "project_id": null
+    },
+    {
+        "name": "Indicators of Access to and Use of Financial Services Across Countries",
+        "description": "<p>This project seeks to develop indicators of access to and use of financial services across countries (what we broadly refer to as \"outreach'), as well as to study what explains variations in access, and how such differences affect economic outcomes across countries. For this purpose, we developed two original questionnaires. The first one targets bank regulators in over 100 countries and inquires primarily about the number of bank outlets (branches and ATMs), and the volume and value of loans and deposits in each country. The second questionnaire surveys the 5 largest banks in over 70 countries about the factors that explains their choice of location, the pricing and terms of their products, and who is granted access to them.</p>\n<p>At this point, we have completed the collection of data from regulators and have produced a working paper that presents the outreach indicators we developed and analyzes both their determinants and their impact on firm financing constraints. The collection of bank level data is still on-going. So far we have received responses from 169 banks in 71 countries.</p>\n",
+        "dataset_id": "0042005",
+        "project_id": null
+    },
+    {
+        "name": "Denpasar (Indonesia) - Flood Risk Map (ESA EO4SD-Urban)",
+        "description": "<p>Risk is defined as a combination of probability and consequences. A detailed and uniform land-use map is an important prerequisite to perform flood risk calculations, since it determines what is damaged in case of flooding. The land-use map was provided by GAF AG and recoded to pre-defined categories to ensure consistent results.<br />\nThe exposition is classified integrating economic costs, social damage, physical damage and flood duration. Four land use damage levels (A, B, C, D) are defined based on this estimation.<br />\nThe Flood Risk matrix is generated based on these results code and on flood hazard classified into three hazard levels. The flood risk level is classified in four qualitative classes based on the combination of flood hazard and land use damage.</p>\n",
+        "dataset_id": "0041750",
+        "project_id": null
+    },
+    {
+        "name": "Africa's Infrastructure: WSS Utility",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0041749",
+        "project_id": null
+    },
+    {
+        "name": "Nairobi, Kenya Land Use 2010",
+        "description": "<p>This shapefile contains land use information for Nairobi, Kenya in 2010. Source: Columbia University's Center for Sustainable Urban Development. For more information visit <a href=\"https://nairobigismaps.wikischolars.columbia.edu/home\">https://nairobigismaps.wikischolars.columbia.edu/home</a></p>\n",
+        "dataset_id": "0041743",
+        "project_id": null
+    },
+    {
+        "name": "Africa's Infrastructure: National Data",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0041740",
+        "project_id": null
+    },
+    {
+        "name": "Crowd-Sourced Price Collection",
+        "description": "<p>The World Bank Pilot Study for Crowd-Sourced Price Data Collection through Mobile Phones combined the need for high-frequency data, recent developments in information and communication technologies, and power of crowd. Crowd-sourced data are data collected and reported by the user community using information and communication technologies.The objective of the pilot was to study the feasibility of crowd-sourced price data collection. Non-professional price collectors used personal computers and mobile phones for collecting data and entering it in a multilingual web microsite developed for the pilot. Price data was collected for thirty tightly specified food commodity items on a monthly basis for approximately six months in eight pilot countries. Non-professional price collectors received compensation in the form of airtime rewards.</p>\n",
+        "dataset_id": "0041739",
+        "project_id": null
+    },
+    {
+        "name": "Dodoma (Tanzania) - Land Use/Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in Larger Urban areas of the City of Dodoma. The Core area has detailed LU/LC nomenclature that is either at Level 3 or 4 whereas the Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-5 (2005) and Sentinel-2 (2015). The input data for the Core Urban area was the Very High Resolution (VHR) data of Quickbird-2 (2006, 2009) and Pleiades (2016). The LU/LC product is the Baseline Product from which various derived products (such as Green Areas and Informal Settlements) are produced.</p>\n",
+        "dataset_id": "0041707",
+        "project_id": "P111153"
+    },
+    {
+        "name": "Usumacinta River Basin - Land Cover Land Use Mapping (LCLU)",
+        "description": "<p>This dataset provides Land Cover Land Use (LCLU) in Usumacinta river basin (Mexico).</p>\n<p>This dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0041488",
+        "project_id": "P131709"
+    },
+    {
+        "name": "Argentina and Chile - Forest and Land Cover/Land Use Mapping",
+        "description": "<p>Land cover, land use, forest mapping, with statistics and fragmentation indicators for Chiloe Island (Chile) and Gran Chaco (Argentina) covering three periods in time (years 2000, 2007 and 2013).<br />\nThese data are produced under ESA project Support to REDD (Reducing Emissions from Deforestation and Forest Degradation) in Latin America.</p>\n<p>This dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0041487",
+        "project_id": "P132846"
+    },
+    {
+        "name": "c. 2006 Land Cover Classification in Addis Ababa, Ethiopia",
+        "description": "<p>This raster file shows the land use classification around Addis Ababa, Ethiopia, c. 2006 The classification results were based on Spot 5 imagery. Land cover classes in the attribute table are as follows:<br />\n 1) Neighborhoods with Small Regular Planned Buildings<br />\n 2) Neighborhoods with Small Irregular Buildings<br />\n 3) Neighborhoods with Large Buildings<br />\n 4) Other (non-built up) Areas</p>\n",
+        "dataset_id": "0041481",
+        "project_id": null
+    },
+    {
+        "name": "World Sea-Level Rise Dataset",
+        "description": "<p>Sea-level rise (SLR) due to climate change is a serious global threat: The scientific evidence is now overwhelming. Continued growth of greenhouse gas emissions and associated global warming could well promote SLR of 1m in this century, and unexpectedly rapid breakup of the Greenland and West Antarctic ice sheets might produce a 3-5m SLR. In this research, we have assessed the consequences of continued SLR for 84 coastal developing countries. Geographic Information System (GIS) software has been used to overlay the best available, spatially-disaggregated global data on critical impact elements (land, population, agriculture, urban extent, wetlands, and GDP), with the inundation zones projected for 1-5m SLR. This research was carried out by the World Bank in 2006, and was funded by the Canadian Trust Fund (TF030569) sponsored by the Canadian International Development Agency (CIDA).</p>\n",
+        "dataset_id": "0041449",
+        "project_id": null
+    },
+    {
+        "name": "Pakistan Biomass Feedstock CropYield",
+        "description": "<p>Crop residue information aggregated from the Biomass Atlas project field survey raw data.<em>Min -- minimum crop residue yield; based on minimum crop yield recorded in the field survey, and the minimum Residue To Crop Ratio in the background data (see: industrial\\Power_plant_model.xlsx in this dataset, sheet RCR)</em>Max -- maximum crop residue yield; based on maximum crop yield recorded in the field survey, and the maximum Residue To Crop Ratio in the background data (see: industrial\\Power_plant_model.xlsx in this dataset, sheet RCR)<em>Mean -- mean crop residue yield (theoretical potential); based on mean crop yield recorded in the field survey, and the mean Residue To Crop Ratio in the background data (see: industrial\\Power_plant_model.xlsx in this dataset, sheet RCR)</em>Std -- standard deviation of the mean crop residue yield in the survey data<em>N -- number of observations for the crop in the survey data</em>AR -- availability of the crop residue based on the current residue use recorded in the field survey (technical potential) <em>ARS -- standard deviation of the availability of the crop residue based on the current residue use</em>AW -- availability of the crop residue based on the current residue use recorded in the field survey and farmers' willingness to participate in a feedstock supply chain (technical potential) *AWS -- standard deviation of the availability of the crop residue based on the current residue use recorded in the field survey and farmers' willingness to participate in a feedstock supply chainwhere * denotes an abbreviation for a crop residue, as listed below.WheStrMin -- Wheat straw /CotStaMin -- Cotton stalkRicStrMin -- Rice strawRicHusMin -- Rice huskMaiStaMin -- Maize stalkMaiCobMin -- Maize cobMaiHusMin -- Maize huskSugTraMin -- Sugarcane trashSugBagMin -- Bagasse Feedstock summary by country and by district, including sampled district confidence intervals for yearly feedstock amounts, t/yr</p>\n",
+        "dataset_id": "0041412",
+        "project_id": "P004538"
+    },
+    {
+        "name": "G20 Financial Inclusion Indicators",
+        "description": "<p>The G20 Basic Set of Financial Inclusion data repository includes detailed data from users and providers of financial services. The Basic Set measures both access to financial services (\u201csupply-side\u201d data) and usage of services (\u201cdemand-side\u201d data). The Basic Set covers both individuals and small and medium sized enterprises (SME\u2019s) and includes data from three sources and 192 countries. The five basic set indicators are as follows: 1.The percentage of adults with a formal account; 2. The percentage of adults that use formal credit; 3. The percentage of SME\u2019s with a formal account; 4. The percentage of SME\u2019s that use formal credit; and 5. Bank branch penetration.</p>\n",
+        "dataset_id": "0041185",
+        "project_id": null
+    },
+    {
+        "name": "Fallujah (Iraq) - Land Use/Land Cover (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Fallujah (Iraq) contains spatial explicit information about the different land covers / uses for current (2017) and past (2004) dates. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-4) over core urban areas covered by very high resolution satellite imagery.</p>\n",
+        "dataset_id": "0041179",
+        "project_id": "P161515"
+    },
+    {
+        "name": "Africa's Infrastructure: Ports",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0041169",
+        "project_id": null
+    },
+    {
+        "name": "Mwanza (Tanzania) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in the Larger Urban areas of the City of Mwanza. The Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-5 (2009), Sentinel-2 (2016), Very High Resolution (VHR) data of Quickbird-2 (2005) and Very High Resolution (VHR) data of Pleiades (2015) and GeoEye (2010).</p>\n",
+        "dataset_id": "0041162",
+        "project_id": "P111153"
+    },
+    {
+        "name": "Bolivia Agricultural Public Expenditure Review",
+        "description": "<p>This is one of the most comprehensive datasets on public spending in the agricultural sector in Bolivia. The data on agriculture and agriculture-related expenditures was derived from the national accounting data obtained from the Public Accounting Department of the Ministry of Economy and Public Finance of Bolivia. The data is disaggregated by function (such as research and extension, irrigation, rural roads, rural electrification, etc.), economic classification (capital and current) and level of government (central, departmental and municipal) for a period of 13 years \u201c from 1996 to 2008. Sub-national units of observation include the 9 Departments of Bolivia and the 327 municipalities, which in 2009 represented all the municipalities in the country.</p>\n",
+        "dataset_id": "0041104",
+        "project_id": "P004538"
+    },
+    {
+        "name": "Karachi (Pakistan) - Land Use/Land Cover (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Karachi (Pakistan) contains spatial explicit information about the different land covers / uses for current (2017) and past (2005) dates. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-3) over core urban areas covered by very high resolution satellite imagery, and level-1 information over peri-urban areas covered by lower resolution satellite imagery.</p>\n",
+        "dataset_id": "0041102",
+        "project_id": "P158509"
+    },
+    {
+        "name": "Market Access: Kyrgyz Republic",
+        "description": "<p>Exploiting the theory of a classic gravity model, the Market Accessibility index is a measure of potential economic connectivity between village/towns and big cities. These population centers are considered a proxy of market size or population potential. This metric discounts the market size proxy by an estimate<br />\nof travel time along a transportation network, which assigns little relevance of a market size in a very far place from the origin or, conversely, assigns a strong relevance for markets in close proximity to the origin. Using the transportation network and estimated travel time is a more realistic measure of<br />\neconomic distance than Euclidean distance because not all distances are equal in travel time and physical or man-made barriers may provide routes that are not straight line distance. Since various methodologies exist for the discount of the market size, a robustness test is suggested.</p>\n",
+        "dataset_id": "0041090",
+        "project_id": "P101613"
+    },
+    {
+        "name": "Nigeria Irrigation Sites",
+        "description": "<p>Polygonal dataset describing irrigations sites across Nigeria; however, no additional information besides location is  provided</p>\n",
+        "dataset_id": "0041080",
+        "project_id": null
+    },
+    {
+        "name": "Urban Flooding of Greater Dhaka in a Changing Climate - Building Local Resilience to Disaster Risk",
+        "description": "<p>This dataset provides five flood scenarios for Greater Dhaka Area, with estimates of location-specific depth and duration of inundation, for extreme rainfall event in 2050.</p>\n<p>Intense rainfall floods Dhaka, Bangladesh, one of the world\u2019s fastest-growing megacities, year in and year out. Low-lying flood plains, rivers, and canals that once drained water are gradually filling up as a result of indiscriminate urbanization, and now magnify, rather than help solve the problem. The climatic outlook for South Asia in the 21st century signals heavier and more erratic rainfall during the monsoon season, according to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change and the World Meteorological Organization.  Thus, climate change may further aggravate Dhaka\u2019s flood vulnerability.</p>\n<p>Dhaka needs to better manage its flood drainage infrastructure and strengthen the city\u2019s climate-disaster resilience and adaptive capacity.  But climate-smart policies require local planners to better understand the likely damage from current flooding, potential damage from climate-related risks, measures that can be taken to cope with current and future flooding as well as adaptation costs.</p>\n<p>In an effort to enhance such understanding and to provide input to development of adaptation policies, this research estimated location-specific depth and duration of inundation from extreme rainfall events by 2050 with or without climate change, discussed structural adaptation measures to cope with current and future flooding, evaluated the reduction in inundation resulting from implementing these measures, and estimated adaptation cost.</p>\n<p>Depth and duration of inundation in Greater Dhaka Area from extreme rainfall events by 2050 with or without climate change under different scenarios at ward/ thana-level have been summarized in the Excel Workbook \u201cUrban Flooding of Greater Dhaka in 2050\u201d</p>\n<p><strong>Detailed Study Area:</strong><br />\nThe dataset covers Greater Dhaka Area: Eastern Dhaka, Western Dhaka-Goranchatbari, Western Dhaka-Kallyanpur, Central Dhaka, Old Dhaka, DND and Narayanganj.</p>\n<p>As flooding is a periodic problem in Dhaka, the city can be said to already have an <em>adaptation deficit even without climate change</em>. The analysis therefore addressed the issue from both current and future climate perspectives.</p>\n<p>**Future (2050) Rainfall Extreme Scenarios: **</p>\n<ul>\n<li>\n<p>Dhaka experienced 341mm rainfall in 24 hours in September 2004; and this historic extreme rainfall was taken as the current climate baseline in the underlying analysis.</p>\n</li>\n<li>\n<p>For the future, the underlying analysis considered a 16 percent increase in extreme rainfall in a changing climate by 2050.</p>\n</li>\n</ul>\n<p><strong>Assumptions about the Future:</strong><br />\nAs any change in land use has implications for the percentage of built-up area, and therefore drainage of the storm water, the analysis assumed that future land cover would change according to the RAJUK\u2019s Detailed Action Plan (DAP). For drainage, the analysis assumed that all improvements to Dhaka\u2019s drainage infrastructure, both planned and proposed by the relevant drainage-system authority, would be implemented.</p>\n<p><strong>Five Alternative Scenarios:</strong><br />\nEstimates of location-specific depth and duration of inundation were estimated for extreme rainfall event in 2050 for following five scenarios:</p>\n<ul>\n<li>Scenario1:  341mm rainfall in 24 hours</li>\n</ul>\n<p>As timing and magnitude of climate change is somewhat unknown, ward/thana-level inundation depth and duration for 2050 were generated for the baseline rainfall event without consideration of any climate change. The analysis accounts for expected socioeconomic changes and planned changes in the land use pattern as well as drainage infrastructure.</p>\n<ul>\n<li>Scenario 2: 341mm rainfall in 24 hours without adaptation deficit</li>\n</ul>\n<p>The estimates of inundation from scenario1 were discussed with the local experts and based on their recommendations a set of potential adaptation measures - for example increase in pump capacity, sludge cleaning, laying of new drainage pipes, deepening existing water bodies - was designed and incorporated in hydrological modeling. The modeling was repeated with different capacities of pumps etc. until a desirable depth and duration of inundation for each study region was attained.</p>\n<ul>\n<li>Scenario 3: 396mm rainfall in 24 hours</li>\n</ul>\n<p>Ward/thana-level estimates of inundation depth and duration were generated for the changing climate in 2050 taking into account climate change - using a potential 16 percent increase in extreme rainfall as a factor as well as accounting for expected socioeconomic changes, planned changes in the land use pattern and drainage infrastructure.</p>\n<ul>\n<li>Scenario 4: 396mm rainfall in 24 hours without adaptation deficit</li>\n</ul>\n<p>Implications for flooding were estimated in a changing climate after current climate adaptation deficit is met.</p>\n<ul>\n<li>Scenario 5: 396mm rainfall in 24 hours without adaptation deficit and with adaptation for climate change</li>\n</ul>\n<p>Implications for a set of adaptation measures suggested by local experts to deal with climate change were estimated.</p>\n<p>These estimates are from the three-step hydrological modeling component of the study.  The first modeling step simulated basin-level flows from the Brahmaputra River in the Ganges-Brahmaputra-Meghna River system since they strongly influence monsoon-season river flows and water levels in the Greater Dhaka area.  In the second step, the effects of climate change on the regional rivers were simulated.  Finally, in the third step, detailed modeling of the drainage system in and around Dhaka city was simulated. The analysis centered on the worst-case scenario in which river levels are high and all sluice gates are closed. Therefore, there is no gravity drainage out of the city and the drainage system depends primarily on the performance efficiency of drainage pumps, which is often the case during intense rainfall.  For Western Dhaka-Old Dhaka, Central Dhaka, Kallyanpur, and Goranchatbari\u2014the impacts of climate change on river flooding were not considered in the analyses as this main part of the city is protected by flood embankments on all sides.</p>\n<p><strong>See Urban Flooding of Greater Dhaka in a Changing Climate- Building Local Resilience to Disaster Risk: chapters 2, 3 and 6 for details.</strong></p>\n<p>These estimates were prepared by Asif Zaman, World Bank Consultant and Water Resources and DSS Specialist, Institute of Water Modeling. The study was conducted under the World Bank-supported study on Urban Flooding of Greater Dhaka in a Changing Climate: Potential Damage and Adaptation (Task team Leader: Susmita Dasgupta). The study team gratefully acknowledges the financial support provided by the Bangladesh Climate Change Resilience Fund (BCCRF) - a multi-donor trust fund supported by the governments of the United Kingdom, Denmark, Sweden, Switzerland, Australia, the United States, and the European Union.</p>\n<p>Lead Researcher: Dr. Asif Zaman</p>\n",
+        "dataset_id": "0041076",
+        "project_id": "P133511"
+    },
+    {
+        "name": "Farming Systems FAO",
+        "description": "<p>These datasets contain both vector and raster data of farming systems by region.</p>\n",
+        "dataset_id": "0041071",
+        "project_id": null
+    },
+    {
+        "name": "BRI Database, Reed and Trubetskoy 2019",
+        "description": "<p>Replication files and instructions for Reed, Tristan; Trubetskoy, Alexandr. 2019. Assessing the Value of Market Access from Belt and Road Projects (English). Policy Research working paper; no. WPS 8815.</p>\n",
+        "dataset_id": "0040786",
+        "project_id": null
+    },
+    {
+        "name": "Mapping of South Asian Cities - Colombo, Chittagong, Jalalabad, and Karachi",
+        "description": "<p>Land cover/land use (LCLU) structure, distribution, changes, change flows structure, and extension of urban areas (potential slums) for the two reference periods: 1999-2001 and 2012-2014, for the four cities: Colombo, Chittagong, Jalalabad, and Karachi.</p>\n<p>This dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0040774",
+        "project_id": "P149790"
+    },
+    {
+        "name": "Caribbean Islands - Land Use Land Cover (LULC)",
+        "description": "<p>Land Use/Land Cover Mapping including water bodies, rivers and streams, for St. Lucia, Grenada, and St. Vincent and the Grenadines.</p>\n<p>This dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0040697",
+        "project_id": null
+    },
+    {
+        "name": "Denpasar (Indonesia) - Land Cover / Land Use Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit Information on different land use and land cover occurring in both the Larger Urban Areas and the Core Areas of the City of Denpasar. The Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-7 (2000, 2002) and Sentinel-2 (2016). The Core area has detailed LU/LC nomenclature that is either at Level 3 or 4. The input data for the Core area was the Very High Resolution data of QuickBird-2 (2005, 2006) and WorldView-2 (2017). The LU/LC product is the Baseline product from which various derived products (such as Green Areas and Informal Settlements) are produced.</p>\n",
+        "dataset_id": "0040688",
+        "project_id": null
+    },
+    {
+        "name": "Has Climate Change Driven Urbanization In Africa?",
+        "description": "<p>Replication data for Henderson, J. Vernon, Adam Storeygard, and Uwe Deichmann. \"Has climate change driven urbanization in Africa?.\" Journal of Development Economics 124 (2017): 60-82.<br />\nData include climate variables, conflict events, industry by district, urban/rural population, and distance to coast.</p>\n<p>This paper documents a substantial impact of climate variation on urbanization in sub-Saharan Africa. In a panel of over 350 subnational regions, we find that drier conditions increase urbanization in places most likely to have an urban industrial base. Total city income in such places also increases. When receiving cities have a traded good sector that is not wholly dependent upon local agriculture, migration to cities provides an \u201cescape\u201d from negative agricultural moisture shocks. However, in most places (75% of our sample) without an industrial base, there is no escape into alternative export-based employment. Drying causes reduced urban and rural incomes, with little overall impact on the urban population share. Finally, the paper shows that climate variation also induces employment changes within the rural sector itself. Drier conditions induce a shift out of farm activities, especially for women, into non-farm activities, and especially out of the measured work force. Overall, these findings imply a strong link between climate and urbanization in Africa.</p>\n<p>This dataset is part of the Global Research Program on Spatial Development of Cities funded by the Multi-Donor Trust Fund on Sustainable Urbanization of the World Bank and supported by the U.K. Department for International Development.</p>\n",
+        "dataset_id": "0040687",
+        "project_id": "P145658"
+    },
+    {
+        "name": "Africa's Infrastructure: Airports",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0040680",
+        "project_id": null
+    },
+    {
+        "name": "WTO Trade Flows and Trade Disputes",
+        "description": "<p>The database from Bown and Reynolds (2014, \"Trade Flows and Trade Disputes\") maps information on the policies that triggered WTO dispute settlement actions between 1995 and 2011 to highly disaggregated, product-level trade data so as to potentially learn from more precise measures of market access. This mapping includes three important elements i) information on the timing of the respondent\u2019s policy change which triggered the dispute; ii) information on the different types of WTO-violating policies imposed, particularly whether they are \u2018global\u2019 policies (imposed against all trading partners) or \u2018partial\u2019 policies (imposed against a subset of trading partners); and iii) the value, volume, and calculated unit values of imports from all trading partners directly impacted by the respondent\u2019s policy change.</p>\n",
+        "dataset_id": "0040667",
+        "project_id": null
+    },
+    {
+        "name": "What Improves Environmental Performance? Evidence from Mexican Industry",
+        "description": "<p>Survey data from Mexico, 1995, which provides detailed information on environmental performance and determinants, including plant, firm and market characteristics, pollution control costs, relationships with regulators, and measures to improve environmental performance. All plant and respondent identities were kept confidential.  The data and survey document are all contained in the zip file.</p>\n<p>As preparation for their research paper on \"What Improves Environmental Performance? Evidence from Mexican Industry,\" Susmita Dasgupta, Mala Hettige and David Wheeler used survey evidence to analyze the effects of regulation, plant-level management policies, and plant and firm characteristics on environmental performance in Mexican factories. They focused especially on management policies: the degree of effort to improve environmental performance and the type of management strategy adopted.</p>\n<p>The survey, conducted in the fall of 1995, focused on the food, chemicals, non-metallic minerals and metals sectors, which account for 75 percent to 95 percent of Mexico\u2019s total industrial pollution. 236 facilities in the survey were chosen as representative of Mexican factories as defined by sector, size and location.</p>\n<p>The survey was designed by a World Bank team, conducted by the Monterrey Institute of Technology, and supported by the Mexico National Environment Ministry (SEMARNAP) and the Mexican National Association of Industries. The survey provides detailed information on performance and determinants, including plant, firm and market characteristics, pollution control costs, relationships with regulators, and measures to improve environmental performance. All plant and respondent identities were kept confidential.</p>\n<p>It is important to note the information derived from the survey was self-reported. No independently audited data on pollution and regulatory compliance was associated with the survey.</p>\n<p>Finally, with confidentiality assured, 49 percent of survey respondents admitted non-compliance with regulations. With no benchmarks, only educated guesses can be made about the degree of upward bias. Evidence from Indonesia, a country with similar regulations but weaker monitoring and enforcement, revealed a non-compliance rate of 64 percent. This suggests that the degree of upward bias in the Mexican self-assessment may be small. In any case, our analysis for this research focuses on relative, not absolute, performance.</p>\n",
+        "dataset_id": "0040661",
+        "project_id": null
+    },
+    {
+        "name": "Subnational Malnutrition Database",
+        "description": "<p>Subnational estimates of child malnutrition (prevalence for stunting, underweight, overweight, wasting and severe wasting indicators) using available data up to 2012.</p>\n",
+        "dataset_id": "0040514",
+        "project_id": null
+    },
+    {
+        "name": "Africa's Infrastructure: Electricity",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0040462",
+        "project_id": "P004538"
+    },
+    {
+        "name": "Arusha (Tanzania) - Land Use/Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in the Core areas and Larger Urban areas of the City of Arusha. The Core area has detailed LU/LC nomenclature that is either at Level 3 or 4. The input data for the Core area was the Very High Resolution (VHR) data of Quickbird-2 (2005) and Worldview-2, GeoEye-1 (2015, 2016). Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Aster (2006) and Sentinel-2 (2016).</p>\n",
+        "dataset_id": "0040457",
+        "project_id": "P111153"
+    },
+    {
+        "name": "El Salvador Land Use Classification in 2003",
+        "description": "<p>Contains land use classification divided by polygons of each type in 2003 in El Salvador.</p>\n",
+        "dataset_id": "0040268",
+        "project_id": null
+    },
+    {
+        "name": "Mumbai (India) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover of the City of Mumbai, with detailed LU/LC nomenclature. The input data for the area was the Very High Resolution (VHR) data of Quickbird (2005) / Pl\u00e9iades-1A/B (2015). The LU/LC product is the Baseline Product from which various derived products (such as Green Areas and Informal Settlements) are produced.</p>\n",
+        "dataset_id": "0040264",
+        "project_id": null
+    },
+    {
+        "name": "World Integrated Trade Solution UNCTAD TRAINS",
+        "description": "<p>UNCTAD-TRAINS (Trade Analysis and Information System) is a trade and market access information system combining the database containing data drawn from UN TARMAC, a joint primary data collection with the International Trade Centre, UNCTAD/WTO (ITC), and the WITS software. TRAINS is both a data depository and an analytical tool designed for policy-makers and economic operators engaged in international merchandise trade. It is also a powerful tool for multilateral or bilateral trade negotiations as well as for general research on international merchandise trade.</p>\n<p>TRAINS contains HS-based data for over 1,000 country/years, covering tariff and non-tariff measures as well as imports flows by origin for more than 160 countries and the years since 1988. For tariffs, TRAINS contains not only general applied tariff data but also information on applied preferential tariff including the Generalized System of Preferences (GSP) and many regional and bilateral preferences.</p>\n<p>TRAINS gives users the possibility of converting the HS data into other internationally recognized nomenclatures such as the Standard International Trade Classification (SITC), the International Standard Industrial Classification (ISIC) or the Broad Economic Categories (BEC) etc... It also provides a single market, partial equilibrium trade simulation model (SMART model) with which users may simulate trade, revenue and welfare effects of tariff changes by a single market country.</p>\n<p>The TRAINS database is physically located at the World Bank server where WITS application is running, but is directly maintained by UNCTAD. Neither UNCTAD, nor the World Bank, accepts the responsibility for the accuracy or suitability of the information provided by in TRAINS database. The user assumes, therefore, all risk associated with the use of the data in TRAINS. The designation employed and the presentation of the material in this database do not imply the expression of any opinion whatsoever on the part of the secretariat of the United Nations concerning the legal status of any country, group of countries, territory, city or area, or of its authorities, or concerning the delimitation of its frontiers or boundaries.</p>\n<p>Access to TRAINS database is free of charge and unlimited. Users need simply to register with WITS and the access is provided automatically.</p>\n",
+        "dataset_id": "0040255",
+        "project_id": null
+    },
+    {
+        "name": "El Salvador Land Use in 2001",
+        "description": "<p>This shapefile contains land use classification in El Salvador in 2001.</p>\n",
+        "dataset_id": "0040228",
+        "project_id": null
+    },
+    {
+        "name": "Zambezi River Basin Land Use, Land Use Change and Soil Erosion",
+        "description": "<p>This dataset provides Land Use, Land Use Change and Soil Loss (Area: Shire sub basin) at 10m resolution.<br />\n1) Land use maps: covers land use for the years 2005 and 2010 and the resulting changes<br />\n2) Erosion map of 2010: Relative potential based on the Revised Universal Soil Loss Equation (RUSLE) erosion formula that uses information on: annual rainfall in 2010, soil type, slope, slope length, land use in 2010 and farming practices.</p>\n<p>This dataset is one of the products produced under the 2008-2012 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2013</p>\n",
+        "dataset_id": "0040203",
+        "project_id": "P114949"
+    },
+    {
+        "name": "Lake Titicaca Land Use and Land Use Changes",
+        "description": "<p>Lake Titicaca sub-basin land use of the years 2003 and 2010; and the land use changes between these years with thirteen Land Use classes defined.</p>\n<p>This dataset is one of the products produced under the 2008-2012 World Bank (WBG) - European Space Agency (ESA) partnership,<br />\nand is published in the partnership report: Earth Observation for Sustainable Development, June 2013</p>\n",
+        "dataset_id": "0039981",
+        "project_id": "P101426"
+    },
+    {
+        "name": "Global Map of Irrigation Areas",
+        "description": "<p>This shapefile shows the amount of area equipped for irrigation.</p>\n",
+        "dataset_id": "0039827",
+        "project_id": null
+    },
+    {
+        "name": "Finance for All? Policy Research Report",
+        "description": "<p>This dataset provides the following measures:</p>\n<ul>\n<li>Composite measure of access to financial services;</li>\n<li>Use of loan and deposit services across economies;</li>\n<li>Branch and ATM penetration across economies;</li>\n<li>Barriers to deposit services;</li>\n<li>Barriers to loan services: consumer and mortgage loans;</li>\n<li>Barriers to loan services: business and SME loans; and</li>\n<li>Barriers to payment services.</li>\n</ul>\n",
+        "dataset_id": "0039818",
+        "project_id": null
+    },
+    {
+        "name": "Agriculture in Africa - Telling Facts from Myths",
+        "description": "<p>Indicators derived on the \"Agriculture in Africa \u201c Telling Facts from Myths\" project.</p>\n",
+        "dataset_id": "0039816",
+        "project_id": null
+    },
+    {
+        "name": "Quantifying Environmental Performance Survey Results",
+        "description": "<p>For this exercise, we have randomly selected 31 United Nations Conference on Environmental and Development (UNCED) reports from the total of 145. These 31 range from highly industrialized to extremely poor, they are drawn from every world region, and they range in size and diversity from China to Jamaica.</p>\n<p>Our survey considers the state of policy and performance in four environmental dimensions: Air, Water, Land and Living Resources. We analyze the apparent state of policy as it affects the interactions between these four environmental dimensions and five activity categories: Agriculture, Industry, Energy, Transport and the Urban Sector. Although many overlaps undoubtedly exist, we attempt to draw a separate assessment for the interaction of each activity category with each environmental dimension.</p>\n<p>Our survey assessment uses twenty five questions to categorize the state of (i) environmental awareness; (ii) scope of policies adopted; (iii) scope of legislation enacted; (iv) control mechanisms in place; and (v) the degree of success in implementation. The status in each category is graded \"High, Medium, Low,\" with assigned values of 2, 1 and 0 respectively. For each UNCED country report, all twenty-five questions are answered for each element of the matrix in Table 1. With 20 elements in the matrix, 500 assessment scores are developed for each country.</p>\n",
+        "dataset_id": "0039674",
+        "project_id": "P076657"
+    },
+    {
+        "name": "Dhaka (Bangladesh) - Land Use / Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Dhaka (Bangladesh) contains spatial explicit information about the different land covers / uses for current (2017) and past (2006) dates. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-3) over core urban areas covered by very high resolution satellite imagery, and level-1 information over peri-urban areas covered by lower resolution satellite imagery.</p>\n",
+        "dataset_id": "0039604",
+        "project_id": "P158509"
+    },
+    {
+        "name": "Overall Trade Restrictiveness Indices and Import Demand Elasticities",
+        "description": "<p>The Overall Trade Restrictiveness Index (OTRI) summarizes the trade policy stance of a country by calculating the uniform tariff that will keep its overall imports at the current level when the country in fact has different tariffs for different goods. In a nutshell, the OTRI is a more sophisticated way to calculate the weighted average tariff of a given country, with the weights reflect the composition of import volume and import demand elasticities of each imported product. The empirical methodology of the OTRI was first developed in Kee, Nicita and Olarreaga (2008, 2009), based on the theoretical underpinning of Anderson and Neary (1994, 1996, 2003). Irwin (forthcoming) also uses a similar methodology to study the historic protection level of the US, from 1867 to 1961. Recently, Kee, Neagu and Nicita (forthcoming) applied a fixed weight version of OTRI to study protectionism of a wide range of countries during the crisis period.</p>\n<p>The OTRI and some other related indices, such as the Trade Restrictiveness Index (TRI) and the Market Access Overall Trade Restrictiveness Index (MAOTRI) are computed annually when new trade flows and tariff data are available. These indices feed into the Global Monitoring Report, an annual World Bank publication joint with the International Monetary Fund. The latest indices and the underlying trade data and elasticity estimates can be download from below. Please cite Kee, Nicita and Olarreaga (2008, 2009) if you are using the elasticity estimates, the OTRI, TRI, MAOTRI or the Ad-Valorem Equivalent of Non-tariff measures of any given country.</p>\n",
+        "dataset_id": "0039585",
+        "project_id": null
+    },
+    {
+        "name": "Bamako (Mali) - Land Use/Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Bamako (Mali) contains spatial explicit information about the different land covers / uses for current (2018) date. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-4) over core urban areas covered by very high resolution satellite imagery.</p>\n",
+        "dataset_id": "0039369",
+        "project_id": "P168363"
+    },
+    {
+        "name": "Bolivia Land Use Plan in 2004",
+        "description": "<p>This shapefile contains a land use plan in Bolivia after 2004.</p>\n",
+        "dataset_id": "0039361",
+        "project_id": null
+    },
+    {
+        "name": "Africa's Infrastructure: Railways",
+        "description": "<p>The Africa Infrastructure Country Diagnostic (AICD) has data collection and analysis on the status of the main network infrastructures. The AICD database provides cross-country data on network infrastructure for nine major sectors: air transport, information and communication technologies, irrigation, ports, power, railways, roads, water and sanitation. The indicators are defined as to cover key areas for policy making: affordability, access, pricing as well as institutional, fiscal and financial aspects. The analysis encompasses public expenditure trends, future investment needs and sector performance reviews. It offers users the opportunity to view AICD results, download documents and materials, search databases and perform customized analysis.</p>\n",
+        "dataset_id": "0039337",
+        "project_id": null
+    },
+    {
+        "name": "Mbeya (Tanzania) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in Larger Urban areas of the City of Mbeya. Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-5 (2004),  (2016: Sentinel-2), Quickbird-2 (2004), GeoEye-1 (2017), Worldview-2/3 (2015).</p>\n",
+        "dataset_id": "0039316",
+        "project_id": "P111153"
+    },
+    {
+        "name": "Tanga (Tanzania) - Land Use/Land Cover Map (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in the Core Urban area of the City of Tanga. The Core Urban area has detailed LU/LC nomenclature that is either at Level 3 or 4. The input data for the Core Urban area was the Very High Resolution (VHR) data of Sentinel-2 (2016) / Landsat-5 (2006).</p>\n",
+        "dataset_id": "0039094",
+        "project_id": "P111153"
+    },
+    {
+        "name": "Agricultural Capital Revisited ",
+        "description": "<p>We construct the fixed-capital series based on national account investment data, using a modification of the perpetual inventory method. The method requires integration of the investment data to obtain capital stocks. For livestock the initial data are the number of animals. We need only calculate the values of the individual herds and then aggregate these values to obtain the total for the full stock of animals. For tree stock we use the estimated resent value of future income derived from the area planted in orchards. Three components of agricultural capital are presented for 30 countries for 1967 to 2000: fixed capital in agriculture, livestock capital, and  tree-stock capital.</p>\n",
+        "dataset_id": "0039066",
+        "project_id": null
+    },
+    {
+        "name": "Environment At-a-Glance Factsheets",
+        "description": "<p>The factsheets contain information covering topics such as Agriculture (eg., fertilizer consumption), Biodiversity (eg., known bird species) to Environmental Health (eg., air pollution damages).</p>\n",
+        "dataset_id": "0039058",
+        "project_id": null
+    },
+    {
+        "name": "Statistical and Psychometric Methods for Educational Measurement",
+        "description": "<p>All impact evaluations depend on quantitative data that typically come from surveys, direct observations of children or service providers, and administrative data like scores from exams. To detect impacts of the interventions under evaluation, we need data that will appropriately measure changes in the outcomes we want the intervention to affect. How do we know we are using the right data and analyzing it appropriately? Enter psychometrics, which is the branch of psychology focused on the design, administration, and interpretation of quantitative assessments. Psychometric evaluations can tell you if you are using the right tools for your measurement goals.</p>\n",
+        "dataset_id": "0039052",
+        "project_id": null
+    },
+    {
+        "name": "Nigeria Commodity Processing Points",
+        "description": "<p>These shapefiles contain commodity processing points (aquaculture, cassava, cocoa, cotton, palm oil, rice and sorghum) in Nigeria.</p>\n",
+        "dataset_id": "0039050",
+        "project_id": null
+    },
+    {
+        "name": "Food Safety in Africa: Past Endeavors and Future Directions",
+        "description": "<p>The Global Food Safety Partnership's (GFSP) Food Safety in Africa provides access to descriptive information on 518 food safety investments in sub-Saharan Africa between 2010 and early 2017. It may be used to identify and cross-reference these projects, perform country-, sector-, or donor-specific analysis, and plan future interventions. The dataset includes basic information, such as the project title, donor, name and type of implementing organization, countries where work was implemented, years underway, and budgets (overall and food-safety specific). It also classifies the primary project purpose and market focus, and lists any known partnerships. The types of project activities, hazards targeted, and commodities/value chains addressed are catalogued based on publicly available documents. Food Safety in Africa was created in support of the 2019 GFSP report, Food Safety in Africa: Past Endeavors and Future Directions. It does not contain evaluative information on the performance of specific projects or donors.</p>\n",
+        "dataset_id": "0039033",
+        "project_id": null
+    },
+    {
+        "name": "Harvested Area Yield 175 Crops",
+        "description": "<p>Series of world maps of harvested areas and production of abaca, agave, alfalfa, almond, anise and apple. <a href=\"http://www.earthstat.org/data-download/\">http://www.earthstat.org/data-download/</a></p>\n",
+        "dataset_id": "0039026",
+        "project_id": null
+    },
+    {
+        "name": "Abidjan (Ivory Coast) - Urban Land Use / Land Cover (LULC) 2005 & 2018 (Larger Urban Area and Core City Area)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Abidjan (Ivory Coast) contains spatial explicit information on different land use and land cover occurring in the Larger Urban Area and Core City Area of the City of Abidjan for past (2005) and current (2018) dates. The Larger Urban Area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban Area was Ikonos (2005) and Sentinel-2 (2019). The Core City Area has detailed LU/LC nomenclature that is either at Level 3 or 4. The input data for the Core City Area was the Very High Resolution (VHR) data of Ikonos (2005) and WorldView-2 (2018/2019)..</p>\n",
+        "dataset_id": "0038989",
+        "project_id": "P156504"
+    },
+    {
+        "name": "Dakar (Senegal) - Land Use / Land Cover (Core City Area and Larger Urban Area)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover of the City of Dakar (SENEGAL), with aggregated LU/LC nomenclature within Larger Urban Area and detailed LU/LC nomenclature within Core City Area for 2006 and 2018.<br />\nThe input data for the Larger Urban Area was the High Resolution (HR) data of Landsat-7 (2006) and Sentinel 2B (2018). For the Core City Area, input data was the Very High Resolution (VHR) data of Quickbird (2006) and Pl\u00e9iades-1A (2018). The LU/LC product is the Baseline Product from which various derived products (such as Green Areas) are produced.</p>\n",
+        "dataset_id": "0038978",
+        "project_id": "P158509"
+    },
+    {
+        "name": "Health Nutrition Population (HNP) Lending",
+        "description": "<p>Find the World Bank's IBRD/IDA lending for Health, Nutrition and Population (HNP) for each fiscal year 1970 and onwards.</p>\n",
+        "dataset_id": "0038977",
+        "project_id": null
+    },
+    {
+        "name": "Phnom Penh (Cambodia) - Land Use/Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use / Land Cover (LULC) information product over Phnom Penh (Cambodia) contains spatial explicit information about the different land covers / uses for current (2017) and past (2003) dates. The level of detail for the classification scheme mainly relies on the input data sources. LULC dataset provides detailed information (level-3) over core urban areas covered by very high resolution satellite imagery, and level-1 information over peri-urban areas covered by lower resolution satellite imagery.</p>\n",
+        "dataset_id": "0038964",
+        "project_id": null
+    },
+    {
+        "name": "Enabling the Business of Agriculture",
+        "description": "<p>The World Bank's Enabling the Business of Agriculture project assesses laws and regulations in agriculture in 101 countries. The data set identifies actionable reforms to remove obstacles for farmers seeking to grow their business. The eight core indicators are: supplying seed, registering fertilizer, securing water, registering machinery, sustaining livestock, protecting plant health, trading food and accessing finance.</p>\n",
+        "dataset_id": "0038944",
+        "project_id": null
+    },
+    {
+        "name": "Saint Louis (Senegal) - Land Use / Land Cover Maps (Core City Area and Larger Urban Area) (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover of both the Larger Urban Area and Core City Area for the City of Saint Louis, with detailed LU/LC nomenclature. The input data for the Larger Urban Area was the High Resolution (HR) data of Landsat-5 (2006) and Sentinel-2 (2018). The input data for the Core City Area was the Very High Resolution (VHR) data of quickbird (2003) and Worldview (2018).<br />\nThe LU/LC product is the Baseline Product from which various derived products (such as Green Areas) are produced.</p>\n",
+        "dataset_id": "0038704",
+        "project_id": null
+    },
+    {
+        "name": "Saint Louis (Senegal) - Flood Risk Map (ESA EO4SD-Urban)",
+        "description": "<p>Risk is defined as a combination of probability and consequences. A detailed and uniform land-use map is an important prerequisite to perform flood risk calculations, since it determines what is damaged in case of flooding.<br />\nTwo different datasets regarding the urban landuse were made available:<br />\n\u2022   LULC product based on VHR data (WorldView-4 acquired on 29/11/2018) covering the core urban area (approx. 89,0 km\u00b2)<br />\n\u2022   LULC product based on HR data (Sentinel 2 acquired on 09/12/2018) covering the urban area (approx. 298,8 km\u00b2)<br />\nBoth land-use classification results were recoded to pre-defined categories) and merged after categorization.<br />\nThe exposition is classified integrating economic costs, social damage, physical damage and flood duration. Four land use damage levels (A, B, C, D) are defined based on this estimation.<br />\nThe Flood Risk matrix is generated based on these results and on flood hazard classified into three hazard levels. The flood risk level is classified in four qualitative classes based on the combination of flood hazard and land use damage.</p>\n",
+        "dataset_id": "0038695",
+        "project_id": null
+    },
+    {
+        "name": "Land Use in Kandy, Sri Lanka in 2000, 2003, 2011, and 2016 ",
+        "description": "<p>These shapefiles contain the land use information for Kandy in 2000, 2003, 2011, and 2016.<br />\nThese files were created from digitizing paper maps from the Urban Development Authority.</p>\n",
+        "dataset_id": "0038484",
+        "project_id": null
+    },
+    {
+        "name": "Semarang (Indonesia) - Terrain Motion Map (ESA EO4SD-Urban)",
+        "description": "<p>Terrain and infrastructure motion contains spatially explicit information on land subsidence area and affected infrastructure. The infrastructure information is generated independently within the Land Use Product and used as an additional input layer for this product.</p>\n",
+        "dataset_id": "0038481",
+        "project_id": null
+    },
+    {
+        "name": "Semarang (Indonesia) - Land Use/Land Cover Maps (ESA EO4SD-Urban)",
+        "description": "<p>Land Use/Land Cover (LU/LC) information product contains spatial explicit information on different land use and land cover occurring in the Larger Urban and Core City areas of the City of Semarang. The Larger Urban area LU/LC nomenclature is at an aggregated Level 1 or 2. The input data for the Larger Urban area was Landsat-5 (2006) and Sentinel-2 (2016). The Core Urban area has detailed LU/LC nomenclature that is either at Level 3 or 4. The input data for the Core Urban area was the Very High Resolution (VHR) data of Quickbird-2 (2006,  2008) and Pleiades (2015).</p>\n",
+        "dataset_id": "0038466",
+        "project_id": null
+    },
+    {
+        "name": "Dakar (Senegal) - Flood Risk Map (ESA EO4SD-Urban)",
+        "description": "<p>Risk is defined as a combination of probability and consequences. A detailed and uniform land-use map is an important prerequisite to perform flood risk calculations, since it determines what is damaged in case of flooding.<br />\nTwo different datasets regarding the urban landuse were made available:<br />\n\u2022   LULC product based on VHR data (WorldView-4 acquired on 29/11/2018) covering the core urban area (approx. 89,0 km\u00b2)<br />\n\u2022   LULC product based on HR data (Sentinel 2 acquired on 09/12/2018) covering the urban area (approx. 298,8 km\u00b2)<br />\nBoth land-use classification results were recoded to pre-defined categories) and merged after categorization.<br />\nThe exposition is classified integrating economic costs, social damage, physical damage and flood duration. Four land use damage levels (A, B, C, D) are defined based on this estimation.<br />\nThe Flood Risk matrix is generated based on these results and on flood hazard classified into three hazard levels. The flood risk level is classified in four qualitative classes based on the combination of flood hazard and land use damage.</p>\n",
+        "dataset_id": "0038463",
+        "project_id": "P158509"
+    },
+    {
+        "name": "Household Impact of Tariffs",
+        "description": "<p>The Household Impacts of Tariffs (HIT) data set contains harmonized household survey and tariff data for 54 low- and lower-middle income countries. The data cover highly disaggregated information on household budget and income shares for 53 agricultural products, wage labor income, nonfarm enterprise sales and transfers, as well as spending on manufacturing and services.</p>\n",
+        "dataset_id": "0038374",
+        "project_id": null
+    },
+    {
+        "name": "Sri Lanka - Land Use Land Cover LULC (Change) Mapping",
+        "description": "<p>Land cover/land use (LULC) maps for the catchments of Kelani Ganga and Attanagalu Oya, and LULC Change comparing 1991, 2001 with the recent LCLU (2012). Classification includes two thematic levels (national 7-class scheme and 15 land cover/land use classes according to user definitions).</p>\n<p>This dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0038274",
+        "project_id": "P146314"
+    },
+    {
+        "name": "India - Water (Tube-well and River) Salinity in Indian Sundarban",
+        "description": "<p>Water is not potable if its salinity exceeds 1 part per thousand (ppt), and water cannot be used for dry season paddy irrigation if its salinity exceeds 2 ppt. Recent field measurements conducted in Basanti, Gosaba, Hingalganj, Kultali, Namkhana, Pathar Pratima and Sagar Block, found that tube-well water salinity exceeds 1 ppt in 17 of 50 hamlets in Gosaba, Hingalgunj and Patharpratima blocks of the Sundarban Reclaimed (populated) Area in India. Measured salinity of water samples collected from Bidya, Matla, Hooghly, and Raimangal Rivers was in the range of 13-27ppt.</p>\n<p>This dataset was prepared by Sreejit Roy, Saptarshi Chakraborty, Tapas Kumar Sutradhar and Santadas Ghosh</p>\n",
+        "dataset_id": "0038270",
+        "project_id": "P153303"
+    },
+    {
+        "name": "World Development Report 2021 - Map 4.2 and Figure 4.1",
+        "description": "<p>The dataset includes data on network coverage (in percentage) types 2G, 3G, and 4G, across farm size (in hectares) all over the world.</p>\n<p>Map 4.2 Agricultural extension services can be tailored to the slower, older broadband internet accessible to many small-scale farmers</p>\n<p>Figure 4.1 Gaps in network coverage differ across farm sizes, affecting agricultural extension services</p>\n",
+        "dataset_id": "0037978",
+        "project_id": null
+    },
+    {
+        "name": "High-resolution crop and maize area mapping for Ethiopia",
+        "description": "<p>Linked to the research conducted under the Methods and Tools Component of the 50x2030 Initiative (<a href=\"https://www.50x2030.org/\">https://www.50x2030.org/</a>), this data deposit includes 10-meter spatial resolution maps for (i) areas cultivated with any crops, and (ii) areas cultivated with maize across Ethiopia for each rainy season during the period of 2016-2019. The maps are a product of the analyses conducted by Azzari et al. (2021), as part of the collaboration between the World Bank and Atlas AI, in support of one of the objectives of the 50x2030 Initiative to create guidelines for the collection of minimum-required survey data for training and validating remote sensing models for high-resolution crop type mapping and crop yield estimation. Azzari et al. (2021) integrate Sentinel-2 satellite imagery and complementary geospatial data with georeferenced plot-level data from national household surveys that were conducted by the Malawi National Statistical Office and the Central Statistical Agency of Ethiopia during the period of 2018-2020 in order to identify the optimal approach to collecting survey data for training a machine learning model to identify areas cultivated with maize. The best performing model estimated by Azzari et al. (2021) has been used to generate the 10-meter spatial resolution maps that are being made available here. For more information, please see the accompanying Basic Information Document and Azzari et al. (2021).</p>\n",
+        "dataset_id": "0037937",
+        "project_id": "P172771"
+    },
+    {
+        "name": "High-resolution crop and maize area mapping for Malawi",
+        "description": "<p>Linked to the research conducted under the Methods and Tools Component of the 50x2030 Initiative (<a href=\"https://www.50x2030.org/\">https://www.50x2030.org/</a>), this data deposit includes 10-meter spatial resolution maps for (i) areas cultivated with any crops, and (ii) areas cultivated with maize across Malawi for each rainy season during the period of 2016-2019. The maps are a product of the analyses conducted by Azzari et al. (2021), as part of the collaboration between the World Bank and Atlas AI, in support of one of the objectives of the 50x2030 Initiative to create guidelines for the collection of minimum-required survey data for training and validating remote sensing models for high-resolution crop type mapping and crop yield estimation. Azzari et al. (2021) integrate Sentinel-2 satellite imagery and complementary geospatial data with georeferenced plot-level data from national household surveys that were conducted by the Malawi National Statistical Office and the Central Statistical Agency of Ethiopia during the period of 2018-2020 in order to identify the optimal approach to collecting survey data for training a machine learning model to identify areas cultivated with maize. The best performing model estimated by Azzari et al. (2021) has been used to generate the 10-meter spatial resolution maps that are being made available here. For more information, please see the accompanying Basic Information Document and Azzari et al. (2021).</p>\n<p>Reference: Azzari, G., Jain, S., Jeffries, G., Kilic, T., and Murray, S. (2021). \"Understanding the Requirements for Surveys to Support Satellite-Based Crop Type Mapping: Evidence from Sub-Saharan Africa.\" World Bank Policy Research Working Paper No. 9609, LSMS Washington, DC: World Bank.</p>\n",
+        "dataset_id": "0037935",
+        "project_id": "P172771"
+    },
+    {
+        "name": "ESCAP-World Bank: International Trade Costs",
+        "description": "<p>The Trade Costs Dataset provides estimates of bilateral trade costs in agriculture and manufactured goods for the 1995-2018 period. It is built on trade and production data collected in 208 countries. Symmetric bilateral trade costs are computed using the Inverse Gravity Framework (Nov. 2009), which estimates trade costs for each country pair using bilateral trade and gross national output. Trade costs are available for two sectors:  trade in manufactured goods, and agriculture. Energy is excluded.</p>\n",
+        "dataset_id": "0037912",
+        "project_id": "P004538"
+    },
+    {
+        "name": "InfraSAP Uruguay",
+        "description": "<p>Geospatial data supporting the INFCE Infrastructure Data and Diagnostics Program. A series of accessibility and travel time rasters have been derived from open-source road networks (OSM) and destination points of interest (city centers, airports, marine ports, cross-country borders) using the GOSTNets methodology. This update contains two raster layers, a raster of travel time to the nearest city with population greater than 50k (<strong>URY_TravelTime</strong>) and a raster with a market accessibility index (<strong>URY_MarketAccess</strong>). The rasters have also been aggregated to the district-level using a population-weighted average for each layer (<strong>URY_Admin2</strong>).</p>\n",
+        "dataset_id": "0037894",
+        "project_id": "P172858"
+    },
+    {
+        "name": "Earth Observation for Climate-related Health Risk in Africa",
+        "description": "<p>The EOCHA Data Portal facilitates the access to heterogeneous datasets providing in a one-stop-shop the access services and basic data mining tools necessary to explore geospatial data i.e. in the context of the disease early warning systems. The Portal is based on the Multisensor Evolution Analysis (MEA) technology - an Earth Observation and geospatial data analysis tool empowered with OGC (Open Geospatial Consortium) standards and open source technologies to enable Big Data access and processing services.<br />\nKey World Bank sectors can benefit from such climaterelated health risk assessment including Agriculture and Rural Development, Environment, and Health, Nutrition and Population in the regions that are afflicted by both high burdens of infectious disease and climate change - notably, Africa, South America, East Asia and the Pacific.</p>\n<p>This platform is produced under the 2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016</p>\n",
+        "dataset_id": "0037853",
+        "project_id": null
+    },
+    {
+        "name": "Lake Victoria Basin Health Monitoring",
+        "description": "<p>This dataset for Lake Victoria includes the following parameters:<br />\n1. Ecological water quality parameters (including Chlorophyll-a surface concentration, Suspended Particulate Matter (SPM) and Lake Surface Temperature (LST)),<br />\n2. Monitoring of the proliferation of macro-algae (water hyacinth index from optical data, water hyacinth likelihood index from radar data, and Floating Vegetation),<br />\n3. Sustainability indexes (evolution of land cover - land use (1984 - 2014), evolution of surface occupied by water hyacinth, evolution of pollution release into the lake due to rainfall streaming,<br />\n4. Other data products (lake bathymetry, topography, time series of meteorological observations).</p>\n<p>Attached images are only JPG map visualizations. Raw data can be accessed through the external link resource.<br />\nThis dataset is one of the products produced under the 2014-2016 World Bank (WBG) - European Space Agency (ESA) partnership, and is published in the partnership report: Earth Observation for Sustainable Development, June 2016.</p>\n",
+        "dataset_id": "0037838",
+        "project_id": "P100406"
+    },
+    {
+        "name": "WORLD - external geospatial platforms: FOOD/ AGRICULTURE",
+        "description": "<p>This dataset is a collection of reliable geospatial platforms that offer qualitative data on food/ agriculture.</p>\n",
+        "dataset_id": "0037826",
+        "project_id": null
+    },
+    {
+        "name": "Syria - Crop growth",
+        "description": "Crops cultivated in Al",
+        "dataset_id": "0037810",
+        "project_id": null
+    },
+    {
+        "name": "Services in the trans-pacific partnership : what would be lost?",
+        "description": "<p>As the fate of the Trans-Pacific Partnership (TPP) hangs in balance, an evaluation of what it offers could inform current decisions and shape future negotiations. The TPPs services component has been hailed as one of the agreement's major accomplishments. To assess the agreement's impact on national policy in the major services sectors, we created a new public database. This database reveals that TPP commitments seldom go beyond countries' applied policies, suggesting the explicit liberalization resulting from the agreement is limited only to a few countries and a few areas. However, the TPP enhances transparency and policy certainty because parties' services commitments cover more trading partners, more sectors and are in some cases closer to applied policies than their commitments under previous agreements. Furthermore, new TPP rules, including on state-owned enterprises, government procurement and competition policy, could enhance services market access. In particular, the TPP breaks new ground in prohibiting restrictions on international data flows, while at the same time creating unprecedented obligations on all parties to protect consumers from fraud and protect privacy. These dual obligations on importing and exporting countries represent a model for regulatory cooperation that could elicit greater market opening if applied to other areas.</p>\n",
+        "dataset_id": "0037790",
+        "project_id": null
+    },
+    {
+        "name": "Harmonized COVID-19 Household Monitoring Surveys",
+        "description": "<p>The dataset contains harmonized indicators created from high-frequency phone surveys collected by the World Bank and partners. The surveys capture the socioeconomic impacts of the COVID-19 pandemic on households and individuals from all developing regions. Data are available for over 155 indicators in 16 topic areas, including education, food security, income, safety nets, and others. For more information, please refer to our Technical Note and Data Dictionary.</p>",
+        "dataset_id": "0037769",
+        "project_id": null
+    },
+    {
+        "name": "Health Nutrition and Population Statistics by Wealth Quintile",
+        "description": "<p>This database presents HNP data by wealth quintile since 1990s to present. It covers more than 70 indicators, including childhood diseases and interventions, nutrition, sexual and reproductive health, mortality, and other determinants of health, for more than 90 low- and middle-income countries. The data sources are Demographic and Health Surveys (DHS) and Multiple Indicator Cluster Surveys (MICS).</p>\n",
+        "dataset_id": "0037656",
+        "project_id": null
+    },
+    {
+        "name": "Health Nutrition and Population Statistics",
+        "description": "<p>Health Nutrition and Population Statistics database provides key health, nutrition and population statistics gathered from a variety of international and national sources. Themes include global surgery, health financing, HIV/AIDS, immunization, infectious diseases, medical resources and usage, noncommunicable diseases, nutrition, population dynamics, reproductive health, universal health coverage, and water and sanitation.</p>\n",
+        "dataset_id": "0037652",
+        "project_id": null
+    }
+]
