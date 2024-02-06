@@ -7,8 +7,8 @@ import aws_cdk.aws_apigatewayv2 as apigw
 import aws_cdk.aws_apigatewayv2_integrations as integrations
 import aws_cdk.aws_ecr_assets as ecr_assets
 import aws_cdk.aws_lambda as _lambda
-from config import settings
 from constructs import Construct
+from utils.config import settings
 
 # import aws_cdk.aws_ec2 as ec2
 
@@ -38,6 +38,7 @@ class Stack(cdk.Stack):
                 'OPENAI_API_KEY': settings.OPENAI_API_KEY,
                 'OPENAI_MODEL': settings.OPENAI_MODEL,
                 'OPENAI_EMBEDDING_MODEL': settings.OPENAI_EMBEDDING_MODEL,
+                'OPENAI_ASSISTANT_NAME': settings.OPENAI_ASSISTANT_NAME,
             },
             timeout=cdk.Duration.seconds(60),
             memory_size=1024,

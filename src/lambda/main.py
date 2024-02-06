@@ -2,16 +2,15 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import datetime
+import time
+from typing import Optional
 
 import lancedb
 import requests
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
-from models import Answer
 from models import Prompt
-from models import Thread
 from openai import OpenAI
 
 # LOAD ENV VARS
@@ -25,7 +24,6 @@ FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
 
 # START SERVICES
 # TODO: place in app.startup routing
-client = OpenAI(api_key=OPENAI_API_KEY)
 app = FastAPI()
 origins = [FRONTEND_DOMAIN or '*']
 app.add_middleware(
@@ -35,6 +33,16 @@ app.add_middleware(
     allow_methods=['*'],
     allow_headers=['*'],
 )
+client = OpenAI(api_key=OPENAI_API_KEY)
+assistants = [
+    assistant
+    for assistant in client.beta.assistants.list()
+    if assistant.name == OPENAI_ASSISTANT_NAME
+]
+if not assistants:
+    raise Exception(f'Assistant {OPENAI_ASSISTANT_NAME} not found')
+assistant = assistants[0]
+
 db = lancedb.connect('.lancedb')
 table = db.open_table('agrifood')
 
@@ -90,16 +98,18 @@ def get_embedding(text: str):
 
 
 # Function to get top 10 query results from Pinecone
-def get_rag_matches(query: str, _type: str, num_results: int = 10):
+def get_rag_matches(query: str, datatype: Optional[str] = None, num_results: int = 10):
     query_embedding = get_embedding(query)
+    search_query = table.search(query_embedding).metric('cosine').limit(num_results)
+
+    if datatype:
+        search_query = search_query.where(f"type = '{datatype}'", prefilter=True)
+
     query_response = [
-        {k: v for k, v in r.items() if k != 'vector'}
-        for r in table.search(query_embedding)
-        .metric('cosine')
-        .limit(num_results)
-        .where(f"type = '{_type}'", prefilter=True)
-        .to_list()
+        {k: v for k, v in r.items() if k != 'vector'} for r in search_query.to_list()
     ]
+
+    print('Query response: ', query_response)
 
     rag_matches = [
         r['text_to_embed'] + ' Unique ID: ' + str(r['id']) for r in query_response
@@ -117,8 +127,8 @@ def get_rag_matches(query: str, _type: str, num_results: int = 10):
 
 
 # Function to search a knowledge base
-def search_knowledge_base(query: str, _type: str):
-    return '\n'.join(get_rag_matches(query, _type))
+def search_knowledge_base(query: str, datatype: Optional[str] = None):
+    return '\n'.join(get_rag_matches(query, datatype))
 
 
 # Function to submit tool outputs
@@ -141,22 +151,22 @@ function_mapping = {
 }
 
 
-@app.post('/vector_search')
-def vector_search(prompt: Prompt):
-    table = db.open_table('agrifood')
+# @app.post("/vector_search")
+# def vector_search(prompt: Prompt):
+#     table = db.open_table("agrifood")
 
-    query_vector = (
-        client.embeddings.create(
-            input=prompt.text,
-            model=OPENAI_EMBEDDING_MODEL,
-        )
-        .data[0]
-        .embedding
-    )
-    return [
-        {k: v for k, v in r.items() if k != 'vector'}
-        for r in table.search(query_vector).metric('cosine').limit(10).to_list()
-    ]
+#     query_vector = (
+#         client.embeddings.create(
+#             input=prompt.message,
+#             model=OPENAI_EMBEDDING_MODEL,
+#         )
+#         .data[0]
+#         .embedding
+#     )
+#     return [
+#         {k: v for k, v in r.items() if k != "vector"}
+#         for r in table.search(query_vector).metric("cosine").limit(10).to_list()
+#     ]
 
 
 @app.get('/healthcheck')
@@ -164,49 +174,96 @@ def healthcheck():
     return {'status': 'running'}
 
 
-@app.post('/openai')
-def openai_request(prompt: Prompt):
-    response = client.chat.completions.create(
-        model=OPENAI_MODEL,
-        messages=[
-            {
-                'role': 'user',
-                'content': prompt.text,
-            },
-        ],
-    )
-    return Answer(text=response.choices[0].message.content)
+# @app.post("/openai")
+# def openai_request(prompt: Prompt):
+#     response = client.chat.completions.create(
+#         model=OPENAI_MODEL,
+#         messages=[
+#             {
+#                 "role": "user",
+#                 "content": prompt.text,
+#             },
+#         ],
+#     )
+#     return Answer(text=response.choices[0].message.content)
 
 
-@app.post('/thread/')
+# @app.post("/thread/")
+# def create_thread(message: Prompt):
+#     thread = client.beta.threads.create(
+#         messages=[
+#             {
+#                 "role": "user",
+#                 "content": message.text,
+#             },
+#         ],
+#     )
+#     return Thread(id=thread.id, created=datetime.fromtimestamp(thread.created_at))
+
+
+def wait_for_status(thread_id: str, run_id: str):
+    run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run_id)
+    while run.status in ['queued', 'in_progress', 'cancelling']:
+        time.sleep(1)
+        run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run_id)
+    return run
+
+
+@app.post('/threads')
 def create_thread():
     thread = client.beta.threads.create()
-    return Thread(id=thread.id, created=datetime.fromtimestamp(thread.created_at))
+    return thread
 
 
-@app.post('/thread/{id}')
-def add_to_thread(id: str, prompt: Prompt):
+@app.post('/threads/{thread_id}/messages')
+def create_message(thread_id: str, prompt: Prompt):
+
     client.beta.threads.messages.create(
-        thread_id=id,
+        thread_id=thread_id,
         role='user',
-        content=prompt.text,
+        content=prompt.message,
     )
-    assistant = [
-        assistant
-        for assistant in client.beta.assistants.list()
-        if assistant.name == OPENAI_ASSISTANT_NAME
-    ]
-    if not prompt.run_id:
-        run = client.beta.threads.runs.create(
-            thread_id=id, assistant_id=assistant[0].id,
-        )
 
-    run = client.beta.threads.runs.retrieve(
-        thread_id=id, run_id=prompt.run_id or run.id,
+    run = client.beta.threads.runs.create(
+        thread_id=thread_id,
+        assistant_id=assistant.id,
     )
-    reply = client.beta.threads.messages.list(thread_id=id)
 
-    return reply.data
+    run = wait_for_status(thread_id, run.id)
+
+    if run.status == 'requires_action':
+        print('Action required by the assistant...')
+        for tool_call in run.required_action.submit_tool_outputs.tool_calls:  # type: ignore
+
+            # Eventually tool_call.type may be other than
+            # `function`, at which point we'll need to handle
+            function_name = tool_call.function.name
+
+            arguments = json.loads(tool_call.function.arguments)
+
+            if function_name not in function_mapping.keys():
+                raise Exception(f'Function {function_name} unknown')
+
+            print(f'Calling function {function_name} with args: {arguments}')
+
+            response = function_mapping[function_name](**arguments)  # type: ignore
+
+            print(f'Function response: {response}')
+            submit_tool_outputs(thread_id, run.id, tool_call.id, response)
+
+    return run
+
+
+@app.get('/threads/{thread_id}/messages')
+def get_messages(thread_id: str):
+    messages = client.beta.threads.messages.list(thread_id=thread_id)
+    return messages.data
+
+
+@app.get('/threads/{thread_id}/runs/{run_id}/status')
+def get_run_status(run_id: str, thread_id: str):
+    run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run_id)
+    return {'status': run.status}
 
 
 handler = Mangum(app, lifespan='off')

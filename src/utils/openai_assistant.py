@@ -37,7 +37,7 @@ client = OpenAI(api_key=settings.OPENAI_API_KEY)
 tools = [
     {
         'name': 'search_knowledge_base',
-        'description': "Search for the most relevant use cases or data from the Data Lab's knowledge base.",
+        'description': "Search for the most relevant data from the Data Lab's knowledge base.",
         'parameters': {
             'type': 'object',
             'properties': {
@@ -45,12 +45,12 @@ tools = [
                     'type': 'string',
                     'description': "The user's query summarized from the conversation.",
                 },
-                'type': {
+                'datatype': {
                     'type': 'string',
-                    'description': "The vector type to search ('use case' or 'data').",
+                    'description': "The vector type to search (one of: 'app', 'project', 'dataset', 'microdataset' or 'youtube_video').",  # noqa
                 },
             },
-            'required': ['user_query', 'type'],
+            'required': ['query'],
         },
     },
     {
@@ -160,11 +160,11 @@ if not assistants:
         instructions="""
     Role:\n
     You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in
-    gathering data and extracting insights to support their work. \n\n
+    gathering data and extracting insights to support their work. \n
     Instructions: \n
-    1. Use the user's replies to call the search_knowledge_base function (with query and type) and return the result to the user.\n
-    2. If the user requests more information on a resource, call the appropriate get function and return the
-    results to the user.\n\n
+    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube_video) or search across datatypes.\n
+    2. With the user's query and datatype (if they have selected one), to call the search_knowledge_base function and return the result to the user. If the user has not selected a datatype, omit the parameter in the function call\n
+    3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.\n
     """,  # noqa
         model='gpt-4-1106-preview',
         tools=tools,  # type: ignore

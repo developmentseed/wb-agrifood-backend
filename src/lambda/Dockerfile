@@ -13,4 +13,4 @@ RUN python3 -m pip install -r requirements.txt -t ${LAMBDA_TASK_ROOT}
 # the API locally, while also allowing the
 # Dockerfile to be used to build the Lambda
 # correctly
-CMD [ "uvicorn",  "main:app", "--reload" ]
+CMD [ "uvicorn",  "main:app", "--reload", "--port", "8080" ]
