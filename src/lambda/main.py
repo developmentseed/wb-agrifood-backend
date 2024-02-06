@@ -5,6 +5,7 @@ from datetime import datetime
 
 import lancedb
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from mangum import Mangum
 from models import Answer, Thread, Prompt
 from openai import OpenAI
@@ -13,14 +14,23 @@ from openai import OpenAI
 
 # LOAD ENV VARS
 # load_dotenv()
-OPENAI_ASSISTANT_NAME = os.environ['OPENAI_ASSISTANT_NAME']
-OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
-OPENAI_MODEL = os.environ['OPENAI_MODEL']
-OPENAI_EMBEDDING_MODEL = os.environ['OPENAI_EMBEDDING_MODEL']
+OPENAI_ASSISTANT_NAME = os.environ.get('OPENAI_ASSISTANT_NAME')
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+OPENAI_MODEL = os.environ.get('OPENAI_MODEL')
+OPENAI_EMBEDDING_MODEL = os.environ.get('OPENAI_EMBEDDING_MODEL')
+FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
 
 # START SERVICES
 client = OpenAI(api_key=OPENAI_API_KEY)
 app = FastAPI()
+origins = [FRONTEND_DOMAIN or "*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 db = lancedb.connect('.lancedb')
 
 
