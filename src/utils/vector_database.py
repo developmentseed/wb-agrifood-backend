@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import logging
 
+import boto3
 import embeddings
 import lancedb
 from config import settings
@@ -11,6 +12,16 @@ from config import settings
 logger = logging.getLogger(__name__)
 logging.getLogger().setLevel(logging.INFO)
 
+client = boto3.client('cloudformation', region_name='us-east-1')
+
+response = client.describe_stacks(
+    StackName=f'wb-agrifoods-data-lab-{settings.STAGE}'.lower(),
+)
+outputs = response['Stacks'][0]['Outputs']
+[bucket_name] = [o['OutputValue'] for o in outputs if o['OutputKey'] == 'bucketname']
+
+
+db = lancedb.connect(f's3://{bucket_name}/{settings.LANCEDB_DATA_PATH}')
 
 with open('records.json', 'r') as f:
     records = json.loads(f.read())
@@ -26,10 +37,11 @@ for d in data:
     key_set.update(set(d.keys()))
 data = [{**{k: None for k in key_set}, **d} for d in data]
 
-db = lancedb.connect('.lancedb')
+# Note: AWS S3 Buckets are not region specific, so the region
+# doesn't really matter here
+
 db.create_table('agrifood', data, mode='overwrite')
 
-db = lancedb.connect('.lancedb')
 table = db.open_table('agrifood')
 
 

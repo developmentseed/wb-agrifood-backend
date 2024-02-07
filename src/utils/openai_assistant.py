@@ -1,33 +1,12 @@
 from __future__ import annotations
 
 import logging
-import os
 
+from config import settings
 from openai import OpenAI
-from pydantic_settings import BaseSettings
-from pydantic_settings import SettingsConfigDict
-
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
-
-
-class Settings(BaseSettings):
-    model_config = SettingsConfigDict(extra='ignore')
-    OPENAI_ASSISTANT_NAME: str
-    OPENAI_API_KEY: str
-    OPENAI_MODEL: str
-    OPENAI_EMBEDDING_MODEL: str
-    FORCE_RECREATE: bool = False
-
-
-settings = Settings(
-    # Comment explaining  why the ignore is needed
-    # need it's own noqa because of flake8's line length
-    # restrictions :(
-    # ignore NOTE: https://github.com/blakeNaccarato/pydantic/blob/c5a29ef77374d4fda85e8f5eb2016951d23dac33/docs/visual_studio_code.md?plain=1#L260-L272 # noqa
-    _env_file=os.environ.get('ENV_FILE', '.env'),  # type: ignore
-)
 
 
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
@@ -159,11 +138,10 @@ if not assistants:
         name=settings.OPENAI_ASSISTANT_NAME,
         instructions="""
     Role:\n
-    You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in
-    gathering data and extracting insights to support their work. \n
+    You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in gathering data and extracting insights to support their work. \n
     Instructions: \n
     1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube_video) or search across datatypes.\n
-    2. With the user's query and datatype (if they have selected one), to call the search_knowledge_base function and return the result to the user. If the user has not selected a datatype, omit the parameter in the function call\n
+    2. With the user's query and datatype (if they have selected one), to call the search_knowledge_base function and return the results to the user. If the user has not selected a datatype, omit the parameter in the function call. For each result, add a small explanation of why that result might be relevant to the user's query\n
     3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.\n
     """,  # noqa
         model='gpt-4-1106-preview',

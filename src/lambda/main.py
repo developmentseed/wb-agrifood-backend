@@ -21,6 +21,8 @@ OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 OPENAI_MODEL = os.environ['OPENAI_MODEL']
 OPENAI_EMBEDDING_MODEL = os.environ['OPENAI_EMBEDDING_MODEL']
 FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
+LANCEDB_DATA_PATH = os.environ.get('LANCEDB_DATA_PATH')
+BUCKET_NAME = os.environ.get('BUCKET_NAME')
 
 # START SERVICES
 # TODO: place in app.startup routing
@@ -43,7 +45,7 @@ if not assistants:
     raise Exception(f'Assistant {OPENAI_ASSISTANT_NAME} not found')
 assistant = assistants[0]
 
-db = lancedb.connect('.lancedb')
+db = lancedb.connect(f's3://{BUCKET_NAME}/{LANCEDB_DATA_PATH}')
 table = db.open_table('agrifood')
 
 
@@ -224,6 +226,7 @@ def create_message(thread_id: str, prompt: Prompt):
         content=prompt.message,
     )
 
+    # TODO: check for any active runs first
     run = client.beta.threads.runs.create(
         thread_id=thread_id,
         assistant_id=assistant.id,

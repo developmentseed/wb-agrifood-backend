@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: str
     OPENAI_MODEL: str
     OPENAI_EMBEDDING_MODEL: str
+    LANCEDB_DATA_PATH: str
 
 
 settings = Settings(
