@@ -15,21 +15,24 @@ client = OpenAI(api_key=settings.OPENAI_API_KEY)
 # Create tools
 tools = [
     {
-        'name': 'search_knowledge_base',
-        'description': "Search for the most relevant data from the Data Lab's knowledge base.",
-        'parameters': {
-            'type': 'object',
-            'properties': {
-                'query': {
-                    'type': 'string',
-                    'description': "The user's query summarized from the conversation.",
+        'type': 'function',
+        'function': {
+            'name': 'search_knowledge_base',
+            'description': "Search for the most relevant data from the Data Lab's knowledge base.",
+            'parameters': {
+                'type': 'object',
+                'properties': {
+                    'query': {
+                        'type': 'string',
+                        'description': "The user's query summarized from the conversation.",
+                    },
+                    'datatype': {
+                        'type': 'string',
+                        'description': "The vector type to search (one of: 'app', 'project', 'dataset', 'microdataset' or 'youtube_video').",  # noqa
+                    },
                 },
-                'datatype': {
-                    'type': 'string',
-                    'description': "The vector type to search (one of: 'app', 'project', 'dataset', 'microdataset' or 'youtube_video').",  # noqa
-                },
+                'required': ['query'],
             },
-            'required': ['query'],
         },
     },
     {
@@ -138,11 +141,11 @@ if not assistants:
         name=settings.OPENAI_ASSISTANT_NAME,
         instructions="""
     Role:\n
-    You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in gathering data and extracting insights to support their work. \n
-    Instructions: \n
-    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube_video) or search across datatypes.\n
-    2. With the user's query and datatype (if they have selected one), to call the search_knowledge_base function and return the results to the user. If the user has not selected a datatype, omit the parameter in the function call. For each result, add a small explanation of why that result might be relevant to the user's query\n
-    3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.\n
+    You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in gathering data and extracting insights to support their work.
+    Instructions:
+    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube_video) or search across datatypes.
+    2. If the user has specified a dataype, use the datatype from the following list: app, project, dataset, microdataset and youtube_video, which most closely the user's requested datatype and call the search_knowledge_base function with the user's query and datatype. If the user chooses to search across datatypes, omit the datatype parameter and call the search_knowledge_base function with just the user's query. The result of the function will be a json encoded list of dictionaries. For each result, generate an explanation of why that result is relevant to the user's query, based on the value of the "text_to_embed" key. Add this explanation to the result under a key named "explanation". Return this list to the user as a json encoded list of dictionaries. Important: do not return plain text to the user. Return a json encoded list of dictionaries. Do not include any markdown formatting elements, such as "```json```" and "\\n", or any other additional text)
+    3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.
     """,  # noqa
         model='gpt-4-1106-preview',
         tools=tools,  # type: ignore

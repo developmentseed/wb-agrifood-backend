@@ -6,9 +6,11 @@ import aws_cdk as cdk
 import aws_cdk.aws_apigatewayv2 as apigw
 import aws_cdk.aws_apigatewayv2_integrations as integrations
 import aws_cdk.aws_ecr_assets as ecr_assets
+import aws_cdk.aws_iam as iam
 import aws_cdk.aws_lambda as _lambda
 import aws_cdk.aws_s3 as s3
 from constructs import Construct
+from openai import OpenAI
 from utils.config import settings
 
 # import aws_cdk.aws_ec2 as ec2
@@ -34,9 +36,40 @@ class Stack(cdk.Stack):
         )
 
         # Create a Lambda function
-        handler = _lambda.Function(
+        thread_runner_lambda_function = _lambda.Function(
             self,
-            'lambda',
+            'thread_runner_lambda',
+            code=_lambda.Code.from_asset_image(
+                directory='src/lambda',
+                cmd=['thread_runner.handler'],
+                platform=ecr_assets.Platform.LINUX_AMD64,
+            ),
+            handler=_lambda.Handler.FROM_IMAGE,
+            runtime=_lambda.Runtime.FROM_IMAGE,
+            environment={
+                # TOOD: use secretsmanager
+                'OPENAI_API_KEY': settings.OPENAI_API_KEY,
+                'OPENAI_EMBEDDING_MODEL': settings.OPENAI_EMBEDDING_MODEL,
+                'LANCEDB_DATA_PATH': settings.LANCEDB_DATA_PATH,
+                'BUCKET_NAME': bucket.bucket_name,
+            },
+            timeout=cdk.Duration.seconds(10 * 60),
+            memory_size=1024,
+        )
+
+        client = OpenAI(api_key=settings.OPENAI_API_KEY)
+        assistants = [
+            assistant
+            for assistant in client.beta.assistants.list()
+            if assistant.name == settings.OPENAI_ASSISTANT_NAME
+        ]
+        if not assistants:
+            raise Exception(f'Assistant {settings.OPENAI_ASSISTANT_NAME} not found')
+        assistant = assistants[0]
+
+        api_lambda_function = _lambda.Function(
+            self,
+            'api_lambda',
             code=_lambda.Code.from_asset_image(
                 directory='src/lambda',
                 cmd=['main.handler'],
@@ -47,17 +80,24 @@ class Stack(cdk.Stack):
             environment={
                 # TOOD: use secretsmanager
                 'OPENAI_API_KEY': settings.OPENAI_API_KEY,
-                'OPENAI_MODEL': settings.OPENAI_MODEL,
-                'OPENAI_EMBEDDING_MODEL': settings.OPENAI_EMBEDDING_MODEL,
-                'OPENAI_ASSISTANT_NAME': settings.OPENAI_ASSISTANT_NAME,
-                'LANCEDB_DATA_PATH': settings.LANCEDB_DATA_PATH,
-                'BUCKET_NAME': bucket.bucket_name,
+                'OPENAI_ASSISTANT_ID': assistant.id,
+                'THREAD_RUNNER_LAMBDA_ARN': thread_runner_lambda_function.function_arn,
             },
             timeout=cdk.Duration.seconds(60),
             memory_size=1024,
         )
 
-        bucket.grant_read_write(handler)
+        api_lambda_function.add_to_role_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=['lambda:InvokeFunction'],
+                resources=[thread_runner_lambda_function.function_arn],
+            ),
+        )
+        thread_runner_lambda_function.grant_invoke(api_lambda_function)
+
+        # Grant the Lambda function read/write permissions to the bucket
+        bucket.grant_read_write(thread_runner_lambda_function)
 
         # Create an API Gateway
         api = apigw.HttpApi(
@@ -65,7 +105,7 @@ class Stack(cdk.Stack):
             'api-gateway',
             default_integration=integrations.HttpLambdaIntegration(
                 'lambda-integration',
-                handler,
+                api_lambda_function,
             ),
         )
 

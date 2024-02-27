@@ -11,6 +11,8 @@ aws-cdk-lib = "^2.125.0"
 pydantic-settings = "^2.1.0"
 pre-commit = "^3.6.0"
 notebook = "7.0.7"
+openai = "^1.10.0"
+
 
 [build-system]
 requires = ["poetry-core"]

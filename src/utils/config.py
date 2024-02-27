@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     OPENAI_MODEL: str
     OPENAI_EMBEDDING_MODEL: str
     LANCEDB_DATA_PATH: str
+    FORCE_RECREATE: bool = False
 
 
 settings = Settings(
