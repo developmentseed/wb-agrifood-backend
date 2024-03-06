@@ -20,7 +20,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.11
     - name: Install pre-commit
       run: pip install pre-commit
     - name: Run pre-commit
@@ -31,21 +31,22 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
     - uses: actions/checkout@v2
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 18
-
     - name: Install AWS CDK
       run: npm install -g aws-cdk@2.X
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
         aws-region: ${{ vars.AWS_REGION }}
-
     - name: 'Create env file'
       run: |
         touch .env
@@ -60,12 +61,9 @@ jobs:
         cat .env
     - name: Install poetry
       uses: abatilo/actions-poetry@v2
-
     - name: Install the project dependencies
       run: poetry install --no-root
-
     - name: Update the OpenAI Assistant
       run: python src/utils/openai_assistant.py
-
     - name: Deploy
       run: cdk deploy --require-approval never
