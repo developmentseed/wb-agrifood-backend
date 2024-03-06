@@ -80,6 +80,7 @@ class Stack(cdk.Stack):
                 'OPENAI_API_KEY': settings.OPENAI_API_KEY,
                 'OPENAI_ASSISTANT_ID': assistant.id,
                 'THREAD_RUNNER_LAMBDA_ARN': thread_runner_lambda_function.function_arn,
+                'STAGE': settings.STAGE,
             },
             timeout=cdk.Duration.seconds(60),
             memory_size=1024,

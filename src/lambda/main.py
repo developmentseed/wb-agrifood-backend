@@ -15,8 +15,8 @@ from openai import OpenAI
 # Ideally import for a shared location to avoid code duplication
 OPENAI_ASSISTANT_ID = os.environ['OPENAI_ASSISTANT_ID']
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
-
 THREAD_RUNNER_LAMBDA_ARN = os.environ['THREAD_RUNNER_LAMBDA_ARN']
+STAGE = os.environ['STAGE']
 
 
 FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
@@ -24,7 +24,7 @@ FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
 
 _lambda = boto3.client('lambda')
 
-app = FastAPI()
+app = FastAPI(root_path=f'/api/{STAGE}')
 
 # START SERVICES
 # TODO: place in app.startup routing
@@ -62,7 +62,8 @@ def create_message(thread_id: str, prompt: Prompt):
 
     # TODO: check for any active runs first
     run = client.beta.threads.runs.create(
-        thread_id=thread_id, assistant_id=OPENAI_ASSISTANT_ID,
+        thread_id=thread_id,
+        assistant_id=OPENAI_ASSISTANT_ID,
     )
 
     # TODO: invoke thread_run_handler lambda
