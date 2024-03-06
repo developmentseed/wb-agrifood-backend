@@ -27,7 +27,7 @@ jobs:
       run: pre-commit run --all-files
 
   deploy:
-    needs: build
+    needs: lint
     runs-on: ubuntu-latest
     environment: staging
     steps:
