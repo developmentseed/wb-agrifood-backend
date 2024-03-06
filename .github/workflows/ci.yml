@@ -1,7 +1,12 @@
 name: Deployment
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - develop
+    tags:
+      - '**'
 
 permissions:
   id-token: write
@@ -26,8 +31,52 @@ jobs:
     - name: Run pre-commit
       run: pre-commit run --all-files
 
-  deploy:
+  deploy-dev:
     needs: lint
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 18
+    - name: Install AWS CDK
+      run: npm install -g aws-cdk@2.X
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    - name: 'Create env file'
+      run: |
+        touch .env
+        echo STAGE=dev >> .env
+        echo OWNER= ${{ github.actor }} >> .env
+        echo OPENAI_ASSISTANT_NAME=wb-agrifood-datalab >> .env
+        echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
+        echo OPENAI_EMBEDDING_MODEL="text-embedding-3-small" >> .env
+        echo LANCEDB_DATA_PATH="app_data/lancedb" >> .env
+        echo FORCE_CREATE=True >> .env
+        echo FRONTEND_DOMAIN="" >> .env
+        cat .env
+    - name: Install poetry
+      uses: abatilo/actions-poetry@v2
+    - name: Install the project dependencies
+      run: poetry install --no-root
+    - name: Update the OpenAI Assistant
+      run: poetry run python src/utils/openai_assistant.py
+    - name: Deploy
+      run: poetry run cdk deploy --require-approval never
+
+  deploy-staging:
+    needs: lint
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: staging
     steps:
@@ -63,11 +112,49 @@ jobs:
       uses: abatilo/actions-poetry@v2
     - name: Install the project dependencies
       run: poetry install --no-root
-    # - name: Install dependencises
-    #   run: |
-    #     python -m pip install --upgrade pip
-    #     python -m pip install poetry
-    #     poetry install --no-root
+    - name: Update the OpenAI Assistant
+      run: poetry run python src/utils/openai_assistant.py
+    - name: Deploy
+      run: poetry run cdk deploy --require-approval never
+
+  deploy-prod:
+    needs: lint
+    if:  startsWith(github.event.ref, 'refs/tags')
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 18
+    - name: Install AWS CDK
+      run: npm install -g aws-cdk@2.X
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    - name: 'Create env file'
+      run: |
+        touch .env
+        echo STAGE=prod >> .env
+        echo OWNER= ${{ github.actor }} >> .env
+        echo OPENAI_ASSISTANT_NAME=wb-agrifood-datalab >> .env
+        echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
+        echo OPENAI_EMBEDDING_MODEL="text-embedding-3-small" >> .env
+        echo LANCEDB_DATA_PATH="app_data/lancedb" >> .env
+        echo FORCE_CREATE=True >> .env
+        echo FRONTEND_DOMAIN="" >> .env
+        cat .env
+    - name: Install poetry
+      uses: abatilo/actions-poetry@v2
+    - name: Install the project dependencies
+      run: poetry install --no-root
     - name: Update the OpenAI Assistant
       run: poetry run python src/utils/openai_assistant.py
     - name: Deploy
