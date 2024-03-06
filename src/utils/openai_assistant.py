@@ -28,7 +28,7 @@ tools = [
                     },
                     'datatype': {
                         'type': 'string',
-                        'description': "The vector type to search (one of: 'app', 'project', 'dataset', 'microdataset' or 'youtube_video').",  # noqa
+                        'description': "The vector type to search (one of: 'app', 'project', 'dataset', 'microdataset' or 'video').",  # noqa
                     },
                 },
                 'required': ['query'],
@@ -122,11 +122,12 @@ tools = [
     },
     {'type': 'code_interpreter'},
 ]
+OPENAI_ASSISTANT_NAME = f'{settings.OPENAI_ASSISTANT_NAME}-{settings.STAGE}'
 
 assistants = [
     assistant
     for assistant in client.beta.assistants.list()
-    if assistant.name == settings.OPENAI_ASSISTANT_NAME
+    if assistant.name == OPENAI_ASSISTANT_NAME
 ]
 
 if assistants and settings.FORCE_RECREATE:
@@ -138,13 +139,13 @@ if not assistants:
     print('Creating assistant')
 
     client.beta.assistants.create(
-        name=settings.OPENAI_ASSISTANT_NAME,
+        name=OPENAI_ASSISTANT_NAME,
         instructions="""
     Role:\n
     You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in gathering data and extracting insights to support their work.
     Instructions:
-    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube_video) or search across datatypes.
-    2. If the user has specified a dataype, use the datatype from the following list: app, project, dataset, microdataset and youtube_video, which most closely the user's requested datatype and call the search_knowledge_base function with the user's query and datatype. If the user chooses to search across datatypes, omit the datatype parameter and call the search_knowledge_base function with just the user's query. The result of the function will be a json encoded list of dictionaries. For each result, generate an explanation of why that result is relevant to the user's query, based on the value of the "text_to_embed" key. Add this explanation to the result under a key named "explanation". Return this list to the user as a json encoded list of dictionaries. Important: do not return plain text to the user. Return a json encoded list of dictionaries. Do not include any markdown formatting elements, such as "```json```" and "\\n", or any other additional text)
+    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube video) or search across datatypes.
+    2. If the user has specified a dataype, use the datatype from the following list: app, project, dataset, microdataset and video, which most closely the user's requested datatype and call the search_knowledge_base function with the user's query and datatype. If the user chooses to search across datatypes, omit the datatype parameter and call the search_knowledge_base function with just the user's query. The result of the function will be a json encoded list of dictionaries. For each result, generate an explanation of why that result is relevant to the user's query, based on the value of the "text_to_embed" key. Add this explanation to the result under a key named "explanation". Return this list to the user as a json encoded list of dictionaries. Important: do not return plain text to the user. Return a json encoded list of dictionaries. Do not include any markdown formatting elements, such as "```json```" and "\\n", or any other additional text)
     3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.
     """,  # noqa
         model='gpt-4-1106-preview',
@@ -154,7 +155,7 @@ if not assistants:
 [assistant] = [
     assistant
     for assistant in client.beta.assistants.list()
-    if assistant.name == settings.OPENAI_ASSISTANT_NAME
+    if assistant.name == OPENAI_ASSISTANT_NAME
 ]
 
 print(assistant)

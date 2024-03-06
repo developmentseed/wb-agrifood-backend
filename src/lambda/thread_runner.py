@@ -15,6 +15,8 @@ OPENAI_EMBEDDING_MODEL = os.environ['OPENAI_EMBEDDING_MODEL']
 LANCEDB_DATA_PATH = os.environ.get('LANCEDB_DATA_PATH')
 BUCKET_NAME = os.environ.get('BUCKET_NAME')
 
+# TODO: package this as its own lambda function with it's own dockerfile
+# etc - since it doens't need FastAPI/Mangum, etc
 
 db = lancedb.connect(f's3://{BUCKET_NAME}/{LANCEDB_DATA_PATH}')
 table = db.open_table('agrifood')
@@ -133,9 +135,10 @@ def process_thread_run(thread_id: str, run_id: str):
     run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run_id)
 
     while run.status != 'completed':
+        print(f'Run status: {run.status}')
 
         if run.status == 'requires_action':
-            print('Action required by the assistant')
+
             for tool_call in run.required_action.submit_tool_outputs.tool_calls:  # type: ignore
 
                 # Eventually tool_call.type may be other than

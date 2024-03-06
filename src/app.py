@@ -13,8 +13,6 @@ from constructs import Construct
 from openai import OpenAI
 from utils.config import settings
 
-# import aws_cdk.aws_ec2 as ec2
-
 
 class Stack(cdk.Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
