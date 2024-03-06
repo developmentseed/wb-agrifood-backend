@@ -1,6 +1,6 @@
 fastapi>=0.109.0
-uvicorn[standard]>=0.27.0.post1
-openai>=1.10.0
+lancedb>=0.5.1
 # load-dotenv=="^0.1.0"
 mangum>=0.17.0
-
+openai>=1.10.0
+uvicorn[standard]>=0.27.0.post1
