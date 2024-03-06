@@ -36,7 +36,7 @@ class Stack(cdk.Stack):
         # Create a Lambda function
         thread_runner_lambda_function = _lambda.Function(
             self,
-            'thread_runner_lambda',
+            'thread-runner-lambda',
             code=_lambda.Code.from_asset_image(
                 directory='src/lambda',
                 cmd=['thread_runner.handler'],
@@ -67,7 +67,7 @@ class Stack(cdk.Stack):
 
         api_lambda_function = _lambda.Function(
             self,
-            'api_lambda',
+            'api-lambda',
             code=_lambda.Code.from_asset_image(
                 directory='src/lambda',
                 cmd=['main.handler'],
@@ -100,7 +100,7 @@ class Stack(cdk.Stack):
         # Create an API Gateway
         api = apigw.HttpApi(
             self,
-            'api-gateway',
+            f'api-gateway-{settings.STAGE}',
             default_integration=integrations.HttpLambdaIntegration(
                 'lambda-integration',
                 api_lambda_function,
