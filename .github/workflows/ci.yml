@@ -69,6 +69,6 @@ jobs:
     #     python -m pip install poetry
     #     poetry install --no-root
     - name: Update the OpenAI Assistant
-      run: python src/utils/openai_assistant.py
+      run: poetry run python src/utils/openai_assistant.py
     - name: Deploy
-      run: cdk deploy --require-approval never
+      run: poetry run cdk deploy --require-approval never
