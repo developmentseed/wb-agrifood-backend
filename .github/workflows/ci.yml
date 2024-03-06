@@ -121,7 +121,7 @@ jobs:
     needs: lint
     if:  startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
-    environment: staging
+    environment: production
     steps:
     - name: Set up Python
       uses: actions/setup-python@v2
