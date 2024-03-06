@@ -59,10 +59,15 @@ jobs:
         echo FORCE_CREATE=True >> .env
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
-    - name: Install poetry
-      uses: abatilo/actions-poetry@v2
-    - name: Install the project dependencies
-      run: poetry install --no-root
+    # - name: Install poetry
+    #   uses: abatilo/actions-poetry@v2
+    # - name: Install the project dependencies
+    #   run: poetry install --no-root
+    - name: Install dependencises
+      run: |
+        pip install --upgrade pip
+        pip install poetry
+        poetry install --no-root
     - name: Update the OpenAI Assistant
       run: python src/utils/openai_assistant.py
     - name: Deploy
