@@ -50,6 +50,7 @@ class Stack(cdk.Stack):
                 'OPENAI_EMBEDDING_MODEL': settings.OPENAI_EMBEDDING_MODEL,
                 'LANCEDB_DATA_PATH': settings.LANCEDB_DATA_PATH,
                 'BUCKET_NAME': bucket.bucket_name,
+                'STAGE': settings.STAGE,
             },
             timeout=cdk.Duration.seconds(10 * 60),
             memory_size=1024,
