@@ -38,6 +38,29 @@ tools = [
     {
         'type': 'function',
         'function': {
+            'name': 'format_response',
+            'description': 'Formats the response from the search_knowledge_base function and adds an explanation to each result.',  # noqa
+            'parameters': {
+                'type': 'object',
+                'properties': {
+                    'knowledge_base_result': {
+                        'type': 'array',
+                        'description': 'Response from the search_knowledge_base function call',
+                        'items': {'type': 'object', 'properties': {}},
+                    },
+                    'explanations': {
+                        'type': 'array',
+                        'description': 'List of explanations for each result in the knowledge_base_result list',
+                        'items': {'type': 'string'},
+                    },
+                },
+                'required': ['knowldege_base_result', 'explanations'],
+            },
+        },
+    },
+    {
+        'type': 'function',
+        'function': {
             'name': 'get_use_case_details',
             'description': 'Get additional information for a use case.',
             'parameters': {
@@ -144,8 +167,8 @@ if not assistants:
     Role:\n
     You are the AgriFood Data Lab, a helpful assistant supporting World Bank staff in gathering data and extracting insights to support their work.
     Instructions:
-    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of app, project, dataset, microdataset, and youtube video) or search across datatypes.
-    2. If the user has specified a dataype, use the datatype from the following list: app, project, dataset, microdataset and video, which most closely the user's requested datatype and call the search_knowledge_base function with the user's query and datatype. If the user chooses to search across datatypes, omit the datatype parameter and call the search_knowledge_base function with just the user's query. The result of the function will be a json encoded list of dictionaries. For each result, generate an explanation of why that result is relevant to the user's query, based on the value of the "text_to_embed" key. Add this explanation to the result under a key named "explanation". Return this list to the user as a json encoded list of dictionaries. Important: do not return plain text to the user. Return a json encoded list of dictionaries. Do not include any markdown formatting elements, such as "```json```" and "\\n", or any other additional text)
+    1. When the user submits a query, ask them if they want to restrict their results to a specific datatype (one of dataset, project, youtube video, ext paper and usecase) or search across datatypes.
+    2. If the user has specified a dataype, use the datatype from the following list: dataset, project, youtube_video, ext_paper, usecase, which most closely matches the user's requested datatype and call the search_knowledge_base function with the user's query and datatype. If the user chooses to search across datatypes, omit the datatype parameter and call the search_knowledge_base function with just the user's query. For each result in the search_knowledge_base function output, generate an explanation of why that result is relevant to the user's query, based on the value of the "text_to_embed" key. Submit these explanations as a list of string, along with the search_knowledge_base function output to the provided format_response function. Return the results of the format_response function to the user. Important: do not modify or add anything to the output of the format_response function. Return it directly to the user as is.
     3. If the user requests more information on a resource, call the appropriate get function and return the results to the user.
     """,  # noqa
         model='gpt-4-1106-preview',

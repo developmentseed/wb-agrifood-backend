@@ -56,13 +56,16 @@ class Stack(cdk.Stack):
         )
 
         client = OpenAI(api_key=settings.OPENAI_API_KEY)
+
+        OPENAI_ASSISTANT_NAME = f'{settings.OPENAI_ASSISTANT_NAME}-{settings.STAGE}'
+
         assistants = [
             assistant
             for assistant in client.beta.assistants.list()
-            if assistant.name == settings.OPENAI_ASSISTANT_NAME
+            if assistant.name == OPENAI_ASSISTANT_NAME
         ]
         if not assistants:
-            raise Exception(f'Assistant {settings.OPENAI_ASSISTANT_NAME} not found')
+            raise Exception(f'Assistant {OPENAI_ASSISTANT_NAME} not found')
         assistant = assistants[0]
 
         api_lambda_function = _lambda.Function(

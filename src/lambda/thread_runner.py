@@ -86,7 +86,6 @@ def get_rag_matches(query: str, datatype: Optional[str] = None, num_results: int
         {k: v for k, v in r.items() if k != 'vector'} for r in search_query.to_list()
     ]
 
-    print('Query response: ', query_response)
     return query_response
 
     # rag_matches = [
@@ -119,9 +118,22 @@ def submit_tool_outputs(thread_id, run_id, tool_call_id, output):
     )
 
 
+def format_response(knowledge_base_result, explanations):
+    if not len(knowledge_base_result) == len(explanations):
+        raise ValueError('Results and explanations must be the same length')
+    return [
+        {
+            **{k: v for k, v in result.items() if v is not None},
+            'explanation': explanation,
+        }
+        for result, explanation in zip(knowledge_base_result, explanations)
+    ]
+
+
 # Function mapping
 function_mapping = {
     'search_knowledge_base': search_knowledge_base,
+    'format_response': format_response,
     'get_use_case_details': get_use_case_details,
     'get_data_details': get_data_details,
     'get_data_file_details': get_data_file_details,
@@ -159,6 +171,8 @@ def process_thread_run(thread_id: str, run_id: str):
 
         time.sleep(1)
         run = client.beta.threads.runs.retrieve(thread_id=thread_id, run_id=run_id)
+
+    print(f'Run status: {run.status}')
 
 
 def handler(event, context):

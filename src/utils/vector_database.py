@@ -23,10 +23,13 @@ outputs = response['Stacks'][0]['Outputs']
 
 db = lancedb.connect(f's3://{bucket_name}/{settings.LANCEDB_DATA_PATH}')
 
-with open('records.json', 'r') as f:
+with open('records_v1.0.json', 'r') as f:
     records = json.loads(f.read())
 # Flatten records
-data = [{'vector': r['embedding'], **r['metadata']} for r in records]
+data = [
+    {'vector': r['embedding'], **{k: v for k, v in r.items() if k != 'embedding'}}
+    for r in records
+]
 
 # LanceDB assumes uses the keys from the first list element
 # as the table columns, so we first ensure that all records
@@ -36,6 +39,8 @@ key_set = set()
 for d in data:
     key_set.update(set(d.keys()))
 data = [{**{k: None for k in key_set}, **d} for d in data]
+
+print(len(data))
 
 # Note: AWS S3 Buckets are not region specific, so the region
 # doesn't really matter here
