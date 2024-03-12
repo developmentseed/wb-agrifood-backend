@@ -83,7 +83,8 @@ def get_rag_matches(query: str, datatype: Optional[str] = None, num_results: int
         search_query = search_query.where(f"type = '{datatype}'", prefilter=True)
 
     query_response = [
-        {k: v for k, v in r.items() if k != 'vector'} for r in search_query.to_list()
+        {k: v for k, v in r.items() if (k != 'vector' or v is not None)}
+        for r in search_query.to_list()
     ]
 
     return query_response
