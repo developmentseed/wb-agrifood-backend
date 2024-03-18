@@ -32,7 +32,7 @@ tools = [
                         'enum': [
                             'dataset',
                             'project',
-                            'youtube_video',
+                            'video',
                             'paper',
                             'usecase',
                         ],
