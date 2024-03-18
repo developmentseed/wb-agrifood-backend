@@ -105,7 +105,7 @@ jobs:
         echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
         echo OPENAI_EMBEDDING_MODEL="text-embedding-3-small" >> .env
         echo LANCEDB_DATA_PATH="app_data/lancedb" >> .env
-        echo FORCE_CREATE=True >> .env
+        echo FORCE_RECREATE=True >> .env
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
     - name: Install poetry
@@ -148,7 +148,7 @@ jobs:
         echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
         echo OPENAI_EMBEDDING_MODEL="text-embedding-3-small" >> .env
         echo LANCEDB_DATA_PATH="app_data/lancedb" >> .env
-        echo FORCE_CREATE=True >> .env
+        echo FORCE_RECREATE=True >> .env
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
     - name: Install poetry
