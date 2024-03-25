@@ -83,9 +83,9 @@ Note: the path pattern should match the value of the `STAGE` env variable that w
 - Create a separate "base" CDK stack which contains the cloudfront distribution and imports the output URLs from all the different API CDK stacks
 
 ## Updating the OpenAI assistant:
-The OpenAI assistant is defined in the `src/utils/openai_assistant.py` file. If any modifications are made to the Assistant's configuration, it can be re-deployed with:
+The OpenAI assistant is defined in the `src/utils/update_openai_assistant.py` file. If any modifications are made to the Assistant's configuration, it can be re-deployed with:
 ```bash
-poetry run python src/utils/openai_assistant.py # (omit `poetry run` if using a virutalenv)
+poetry run python src/utils/update_openai_assistant.py # (omit `poetry run` if using a virutalenv)
 ```
 
 Make sure the `FORCE_RECREATE` flag/environment variable is set to true to ensure the Assistant is deleted and re-created.

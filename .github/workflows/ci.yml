@@ -70,7 +70,9 @@ jobs:
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
-      run: poetry run python src/utils/openai_assistant.py
+      run: poetry run python src/utils/update_openai_assistant.py
+    - name: Update the vector database
+      run: AWS_REGION=us-east-1 poetry run python src/utils/load_vector_database.py
     - name: Deploy
       run: poetry run cdk deploy --require-approval never
 
@@ -113,7 +115,9 @@ jobs:
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
-      run: poetry run python src/utils/openai_assistant.py
+      run: poetry run python src/utils/update_openai_assistant.py
+    - name: Update the vector database
+      run: AWS_REGION=us-east-1 poetry run python src/utils/load_vector_database.py
     - name: Deploy
       run: poetry run cdk deploy --require-approval never
 
@@ -156,6 +160,8 @@ jobs:
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
-      run: poetry run python src/utils/openai_assistant.py
+      run: poetry run python src/utils/update_openai_assistant.py
+    - name: Update the vector database
+      run: AWS_REGION=us-east-1 poetry run python src/utils/load_vector_database.py
     - name: Deploy
       run: poetry run cdk deploy --require-approval never
