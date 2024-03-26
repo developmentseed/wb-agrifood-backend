@@ -90,20 +90,23 @@ poetry run python src/utils/update_openai_assistant.py # (omit `poetry run` if u
 
 Make sure the `FORCE_RECREATE` flag/environment variable is set to true to ensure the Assistant is deleted and re-created.
 
+The Github CI/CD is configured to recreate the OpenAI assistant (`dev` on pushed to `branch:develop`, `staging` on pushes to `branch:main` and `prod` on release tags from `branch:main`)
+
 #### Note: after updating the Assistant, be sure to re-run the deployment for the corresponding stack, so that the stack is aware of the new Assistant's ID (this is what the API uses to find the correct Assistant to interact with)
 
 ## Updating the knowledge base:
 The knowledge base uses [LanceDB](https://lancedb.github.io/lancedb/), a very effcicient, in-memory vector database, with metadata filtering. The database is instantiated from data files in S3, so the database can be eaily updated by anyone who has access to the S3 bucket. Once the data files in S3 are updates, the changes will be immediately available in the API (without having to manage an external database infrastructure/migration logic).
 
-The knowledge base can be updated with the `src/utils/vector_database.py` script. The vector database is also scoped to a specific backend environement (`dev`, `staging`, `prod`, etc) so make sure that the `STAGE` environment variable points to the correct backend for which you want to update the vector database:
+The knowledge base can be updated with the `src/utils/update_vector_database.py` script. The vector database is also scoped to a specific backend environement (`dev`, `staging`, `prod`, etc) so make sure that the `STAGE` environment variable points to the correct backend for which you want to update the vector database:
 ```bash
-poetry run python src/utils/vector_database.py`
+poetry run python src/utils/update_vector_database.py`
 ```
 (Again, you can omit the `poetry run` if running the above command in a virtual environment)
 
-The above script will require AWS access credentials. Contact leo@developmentseed.org for access.
+As with the OpenAI Assistant, the Github CI/CD is configured to destroy and re-create the knowledge base (`dev` on pushed to `branch:develop`, `staging` on pushes to `branch:main` and `prod` on release tags from `branch:main`)
 
-The script expects all of the knowledge based records to be stored in a JSON file (`records.json`), as a List of JSON objects, each with at least the following keys: `emebdding: List[float], id: str` and any number of other metadata key-value pairs (see [here](https://lancedb.github.io/lancedb/sql/) for the filtering options available for metadata fields).
+
+The script expects all of the knowledge based records to be stored in a JSON file (`records.json`), as a List of JSON objects, each with at least the following keys: `id: str, title: str, type: str` and any number of other metadata key-value pairs (see [here](https://lancedb.github.io/lancedb/sql/) for the filtering options available for metadata fields).
 
 Currently, due to the very low number of data entries in the knowledge base we aren't using any [ANN indexes](https://lancedb.github.io/lancedb/ann_indexes/). Without an ANN index, the query runtime will grow proportionally to the database size. After a certain point it will be necessary to [train an index](https://lancedb.github.io/lancedb/ann_indexes/). Eventually, at an even larger data volume, it may be a good idea to switch to a dedicated database, such as Postgres.
 
