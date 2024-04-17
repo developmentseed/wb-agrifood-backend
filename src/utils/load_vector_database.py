@@ -19,7 +19,7 @@ TABLE_NAME = 'agrifood'
 
 OPENAI_CLIENT = OpenAI(api_key=settings.OPENAI_API_KEY)
 BOTO3_CLIENT = boto3.client('cloudformation', region_name='us-east-1')
-DATA_FILE_PATH = Path('data/records.json')
+DATA_FILE_PATH = Path('data/records_v1.0_cleaned.json')
 
 
 def instantiate_database() -> lancedb.DBConnection:
@@ -37,10 +37,16 @@ def instantiate_database() -> lancedb.DBConnection:
 
 def generate_embeddings(records: list[dict]) -> list[dict]:
 
+    if all('embedding' in r for r in records):
+        logger.info('Records already have embeddings, skipping')
+        return records
+
+    logger.info('Generating embeddings')
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         embeddings = list(
             executor.map(
-                lambda d: get_embedding(get_tokens(get_text_to_embed(d))), records,
+                lambda d: get_embedding(get_tokens(get_text_to_embed(d))),
+                records,
             ),
         )
 
@@ -105,7 +111,12 @@ if __name__ == '__main__':
 
     # NOTE: must be run from project root!
     with open(DATA_FILE_PATH, 'r') as f:
-        records = json.loads(f.read())[:10]
+        records = json.loads(f.read())
+
+    if not all('id' in r for r in records):
+        raise ValueError("All records must have an 'id' key")
+    if not all('type' in r for r in records):
+        raise ValueError("All records must have a 'type' key")
 
     prepped_records = prep_records_for_insert(generate_embeddings(records))
 
@@ -116,7 +127,8 @@ if __name__ == '__main__':
     query = 'How is food security affected by drought in north africa?'
     query_vector = (
         OPENAI_CLIENT.embeddings.create(
-            input=query, model=settings.OPENAI_EMBEDDING_MODEL,
+            input=query,
+            model=settings.OPENAI_EMBEDDING_MODEL,
         )
         .data[0]
         .embedding
