@@ -24,6 +24,9 @@ FRONTEND_DOMAIN = os.environ.get('FRONTEND_DOMAIN')
 
 _lambda = boto3.client('lambda')
 
+# TODO: make this root_path configurable based on the
+# presence of an environment variable/setting of the
+# same name
 app = FastAPI(root_path=f'/api/{STAGE}')
 
 # START SERVICES

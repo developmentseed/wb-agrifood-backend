@@ -1,4 +1,0 @@
-boto3==1.34.36
-lancedb==0.5.3
-openai==1.11.1
-tiktoken==0.5.2
