@@ -19,7 +19,7 @@ TABLE_NAME = 'agrifood'
 
 OPENAI_CLIENT = OpenAI(api_key=settings.OPENAI_API_KEY)
 BOTO3_CLIENT = boto3.client('cloudformation', region_name='us-east-1')
-DATA_FILE_PATH = Path('data/records_v1.0_cleaned.json')
+DATA_FILE_PATH = Path('data/records_v2.0_cleaned.json')
 
 
 def instantiate_database() -> lancedb.DBConnection:
