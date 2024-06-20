@@ -30,9 +30,9 @@ tools = [
                         'type': 'string',
                         'description': 'The data type to search for',
                         'enum': [
-                            'dataset',
-                            'video',
-                            'usecase',
+                            'Dataset',
+                            'Document',
+                            'Video',
                         ],
                     },
                 },
