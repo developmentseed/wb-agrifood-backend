@@ -21,9 +21,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
       with:
         python-version: 3.11
     - name: Install pre-commit
@@ -38,18 +38,18 @@ jobs:
     environment: development
     steps:
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
       with:
         python-version: 3.11
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2
       with:
         node-version: 18
     - name: Install AWS CDK
       run: npm install -g aws-cdk@2.X
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838 # v1
       with:
         role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
         aws-region: ${{ vars.AWS_REGION }}
@@ -66,7 +66,7 @@ jobs:
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
     - name: Install poetry
-      uses: abatilo/actions-poetry@v2
+      uses: abatilo/actions-poetry@a5643c67b5fcc9ac5eddb395c7f61b1b66d86034 # v2
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
@@ -83,18 +83,18 @@ jobs:
     environment: staging
     steps:
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
       with:
         python-version: 3.11
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2
       with:
         node-version: 18
     - name: Install AWS CDK
       run: npm install -g aws-cdk@2.X
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838 # v1
       with:
         role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
         aws-region: ${{ vars.AWS_REGION }}
@@ -111,7 +111,7 @@ jobs:
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
     - name: Install poetry
-      uses: abatilo/actions-poetry@v2
+      uses: abatilo/actions-poetry@a5643c67b5fcc9ac5eddb395c7f61b1b66d86034 # v2
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
@@ -128,18 +128,18 @@ jobs:
     environment: production
     steps:
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e # v2
       with:
         python-version: 3.11
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
     - name: Use Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@7c12f8017d5436eb855f1ed4399f037a36fbd9e8 # v2
       with:
         node-version: 18
     - name: Install AWS CDK
       run: npm install -g aws-cdk@2.X
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@67fbcbb121271f7775d2e7715933280b06314838 # v1
       with:
         role-to-assume: ${{ vars.OIDC_DEPLOYMENT_ROLE_ARN }}
         aws-region: ${{ vars.AWS_REGION }}
@@ -156,7 +156,7 @@ jobs:
         echo FRONTEND_DOMAIN="" >> .env
         cat .env
     - name: Install poetry
-      uses: abatilo/actions-poetry@v2
+      uses: abatilo/actions-poetry@a5643c67b5fcc9ac5eddb395c7f61b1b66d86034 # v2
     - name: Install the project dependencies
       run: poetry install --no-root
     - name: Update the OpenAI Assistant
